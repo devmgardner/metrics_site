@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html ng-app='app'>
+	<head>
+        <base href="/runemetrics/app/">
+
+		<title ng-bind="title">RuneMetrics - RuneScape player profiles and stat tracking</title>
+        <meta name="description" content="Automatic tracking of RuneScape XP, skills, levels, kills and drops." />
+        <meta name="keywords" content="RuneScape, RuneMetrics">
+        <meta name="twitter:title" content="RuneMetrics - RuneScape player profiles and stat tracking" />
+        <meta name="twitter:description" content="Automatic tracking of RuneScape XP, skills, levels, kills and drops." />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:url" content="https://apps.runescape.com/runemetrics/app/welcome" />
+        <meta name="twitter:image" content="https://cdn.runescape.com/assets/img/external/runemetrics/welcome-header.jpg" />
+        <meta property="og:title" content="RuneMetrics - RuneScape player profiles and stat tracking" />
+        <meta property="og:description" content="Automatic tracking of RuneScape XP, skills, levels, kills and drops." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://cdn.runescape.com/assets/img/external/runemetrics/welcome-header.jpg" />
+        <meta property="og:url" content="https://apps.runescape.com/runemetrics/app/welcome" />
+        <meta property="og:site_name" content="RuneMetrics" />
+            
+        <link rel="shortcut icon" href="{% static 'feed/images/logos/runemetrics_icon.4979b4d2.png' %}">
+        <link rel="apple-touch-icon" href="{% static 'feed/images/logos/runemetrics_iconx2.802fa2a1.png' %}">
+        <!-- <link rel=âapple-touch-icon-precomposedâ href=âimages/logos/runemetrics_iconx2.pngâ/> -->
+            
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://apps.runescape.com/runemetrics/css/d.app.56cc3e14.css">
+
+		<script type='text/javascript' src="https://apps.runescape.com/runemetrics/js/vendor/modernizr.439d2e61.js"></script>
+
+	</head>
+	<body class="antialiased row collapse">
+        <overlay></overlay>
+        <header></header>
+                        
+        <div class="content medium-12">
+            <loader-graphic></loader-graphic>
+            <subscribe></subscribe>
+            <settings-menu></settings-menu>
+            <ui-view></ui-view>
+            <footer></footer>
+        </div>
+        
+        <script src="https://apps.runescape.com/runemetrics/js/d.vendor.d2d133ea.js"></script>
+
+        <script src="https://apps.runescape.com/runemetrics/js/d.app.15f05f72.js"></script>
+	</body>
+</html>
