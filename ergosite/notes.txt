@@ -1,2 +1,3 @@
 https://secure.runescape.com/m=adventurers-log/rssfeed?searchName=Ergo
 https://apps.runescape.com/runemetrics/app/overview/player/Ergo
+https://runescape.wiki/w/Application_programming_interface#Runemetrics
