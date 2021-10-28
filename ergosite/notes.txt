@@ -3,3 +3,10 @@ https://apps.runescape.com/runemetrics/app/overview/player/Ergo
 https://runescape.wiki/w/Application_programming_interface#Runemetrics
 https://stackoverflow.com/questions/359424/detach-move-subdirectory-into-separate-git-repository
 https://stackoverflow.com/questions/359424/detach-move-subdirectory-into-separate-git-repository
+
+
+https://towardsdatascience.com/how-to-update-your-live-django-website-b84645753ea1
+https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_website
+https://faun.pub/dynamic-website-with-django-55db56c1068a
+https://stackoverflow.com/questions/19698796/insert-script-to-run-on-serving-a-template-page-with-django
+https://stackoverflow.com/questions/38999015/execute-a-python-script-in-django-webpage
