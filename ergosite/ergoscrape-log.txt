@@ -1,20 +1,40 @@
-Item 2013578871 already exists in database, skipping.
-Item 1421622057 already exists in database, skipping.
-Item 1421622056 already exists in database, skipping.
-Item 1389237257 already exists in database, skipping.
-Item 1389237256 already exists in database, skipping.
-Item 1322311857 already exists in database, skipping.
-Item 509829406 already exists in database, skipping.
-Item 436062770 already exists in database, skipping.
-Item 1136281524 already exists in database, skipping.
-Item 336119900 already exists in database, skipping.
-Item 2117502736 already exists in database, skipping.
-Item 1138128697 already exists in database, skipping.
-Item 2030247933 already exists in database, skipping.
-Item 2098697872 already exists in database, skipping.
-Item 2042182449 already exists in database, skipping.
-Item 2135570636 already exists in database, skipping.
-Item 1111726696 already exists in database, skipping.
-Item 911255546 already exists in database, skipping.
-Item 486186864 already exists in database, skipping.
-Item 681440303 already exists in database, skipping.
+10-28-2021 14:31:21 UTC - 1590253584 dupcheck
+10-28-2021 14:31:21 UTC - 1098895241 dupcheck
+10-28-2021 14:31:21 UTC - 2040039470 dupcheck
+10-28-2021 14:31:21 UTC - 2013578871 dupcheck
+10-28-2021 14:31:21 UTC - 1421622057 dupcheck
+10-28-2021 14:31:21 UTC - 1421622056 dupcheck
+10-28-2021 14:31:21 UTC - 1389237257 dupcheck
+10-28-2021 14:31:21 UTC - 1389237256 dupcheck
+10-28-2021 14:31:21 UTC - 1322311857 dupcheck
+10-28-2021 14:31:21 UTC - 509829406 dupcheck
+10-28-2021 14:31:21 UTC - 436062770 dupcheck
+10-28-2021 14:31:21 UTC - 1136281524 dupcheck
+10-28-2021 14:31:21 UTC - 336119900 dupcheck
+10-28-2021 14:31:21 UTC - 2117502736 dupcheck
+10-28-2021 14:31:21 UTC - 1138128697 dupcheck
+10-28-2021 14:31:21 UTC - 2030247933 dupcheck
+10-28-2021 14:31:21 UTC - 2098697872 dupcheck
+10-28-2021 14:31:21 UTC - 2042182449 dupcheck
+10-28-2021 14:31:21 UTC - 2135570636 dupcheck
+10-28-2021 14:31:21 UTC - 1111726696 dupcheck
+10-28-2021 14:31:28 UTC - 1590253584 dupcheck
+10-28-2021 14:31:28 UTC - 1098895241 dupcheck
+10-28-2021 14:31:28 UTC - 2040039470 dupcheck
+10-28-2021 14:31:28 UTC - 2013578871 dupcheck
+10-28-2021 14:31:28 UTC - 1421622057 dupcheck
+10-28-2021 14:31:28 UTC - 1421622056 dupcheck
+10-28-2021 14:31:28 UTC - 1389237257 dupcheck
+10-28-2021 14:31:28 UTC - 1389237256 dupcheck
+10-28-2021 14:31:28 UTC - 1322311857 dupcheck
+10-28-2021 14:31:28 UTC - 509829406 dupcheck
+10-28-2021 14:31:28 UTC - 436062770 dupcheck
+10-28-2021 14:31:28 UTC - 1136281524 dupcheck
+10-28-2021 14:31:28 UTC - 336119900 dupcheck
+10-28-2021 14:31:28 UTC - 2117502736 dupcheck
+10-28-2021 14:31:28 UTC - 1138128697 dupcheck
+10-28-2021 14:31:28 UTC - 2030247933 dupcheck
+10-28-2021 14:31:28 UTC - 2098697872 dupcheck
+10-28-2021 14:31:28 UTC - 2042182449 dupcheck
+10-28-2021 14:31:28 UTC - 2135570636 dupcheck
+10-28-2021 14:31:28 UTC - 1111726696 dupcheck

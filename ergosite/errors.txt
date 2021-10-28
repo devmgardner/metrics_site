@@ -1,0 +1,2 @@
+dupcheck - Item already in database, duplicate
+nferr - Attribute not found
