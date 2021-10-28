@@ -5,17 +5,17 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 #
-fname = f'{currentdir}\ergoscrape-log.txt'
+fname = f'{currentdir}/alintharscrape-log.txt'
 fhand = open(fname, 'w')
 fhand.close()
 fhand = open(fname, 'r+')
 
 
-ergocon = sq.connect(f'{currentdir}\ergo.sqlite')
+ergocon = sq.connect(f'{currentdir}/alinthar.sqlite')
 ergocur = ergocon.cursor()
 
 
-url = 'https://secure.runescape.com/m=adventurers-log/rssfeed?searchName=Ergo'
+url = 'https://secure.runescape.com/m=adventurers-log/rssfeed?searchName=Alinthar'
 response = rq.get(url)
 date = time.asctime(time.gmtime())
 data = ET.fromstring(response.text)
@@ -50,5 +50,5 @@ for item in feed:
         ergocur.execute('INSERT INTO Events (itemid, title, description, link, date) VALUES (?, ?, ?, ?, ?)', (itemid, title, description, link, date,))
         ergocon.commit()
     else:
-        fhand.write(f'Item {id} already exists in database, skipping.\n')
+        fhand.write(f'Item {itemid} already exists in database, skipping.\n')
         continue
