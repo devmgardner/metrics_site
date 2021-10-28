@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths ng-scope"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+        <!--<base href="/runemetrics/app/">--><base href=".">
+
+		<title ng-bind="title" class="ng-binding">My Profile - RuneMetrics - RuneScape player stat tracking</title>
+        <meta name="description" content="Automatic tracking of RuneScape XP, skills, levels, kills and drops.">
+        <meta name="keywords" content="RuneScape, RuneMetrics">
+        <meta name="twitter:title" content="RuneMetrics - RuneScape player profiles and stat tracking">
+        <meta name="twitter:description" content="Automatic tracking of RuneScape XP, skills, levels, kills and drops.">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:url" content="https://apps.runescape.com/runemetrics/app/welcome">
+        <meta name="twitter:image" content="https://cdn.runescape.com/assets/img/external/runemetrics/welcome-header.jpg">
+        <meta property="og:title" content="RuneMetrics - RuneScape player profiles and stat tracking">
+        <meta property="og:description" content="Automatic tracking of RuneScape XP, skills, levels, kills and drops.">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="https://cdn.runescape.com/assets/img/external/runemetrics/welcome-header.jpg">
+        <meta property="og:url" content="https://apps.runescape.com/runemetrics/app/welcome">
+        <meta property="og:site_name" content="RuneMetrics">
+            
+        <link rel="shortcut icon" href="https://apps.runescape.com/runemetrics/images/logos/runemetrics_icon.4979b4d2.png">
+        <link rel="apple-touch-icon" href="https://apps.runescape.com/runemetrics/images/logos/runemetrics_iconx2.802fa2a1.png">
+        <link rel="âapple-touch-icon-precomposedâ" href="https://apps.runescape.com/runemetrics/app/%C3%A2%C2%80%C2%9Dimages/logos/runemetrics_iconx2.png%C3%A2%C2%80%C2%9D/">
+            
+        
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="./My Profile - RuneMetrics - RuneScape player stat tracking_files/d.app.56cc3e14.css">
+
+        <script type="text/javascript" charset="UTF-8" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/configuration.js.download"></script><script id="Cookiebot" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/uc.js.download" data-cbid="9147fcf2-a466-4a5d-82ab-43e528833d80" data-blockingmode="auto"></script>
+
+        <script type="text/javascript" data-cookieconsent="ignore">
+            var _ctx = {
+                url: "/runemetrics",
+                startDate: "22 02 2016"
+            };
+        </script>
+
+		<script type="text/javascript" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/modernizr.439d2e61.js.download"></script><link href="./My Profile - RuneMetrics - RuneScape player stat tracking_files/modernizr.439d2e61.js.download" rel="preload" as="script">
+
+        <script type="text/plain" data-cookieconsent="statistics">
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-2058817-39', 'auto');
+
+        </script>
+	<link href="./My Profile - RuneMetrics - RuneScape player stat tracking_files/d.vendor.d2d133ea.js.download" rel="preload" as="script"><link href="./My Profile - RuneMetrics - RuneScape player stat tracking_files/d.app.15f05f72.js.download" rel="preload" as="script"><meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large-only"><meta class="foundation-mq-large"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-small-only"><meta class="foundation-mq-small"><style></style><style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing,.cookieconsent-optin{display:none;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:block;display:initial;}</style><meta class="foundation-mq-topbar"></head>
+	<body class="antialiased row collapse">
+        <overlay><!-- ngIf: display -->
+</overlay>
+        <header class="ng-isolate-scope"><div class="row">
+    <div class="small-12 collumns header-bar">
+        <ul class="text-center flexi-header__list flexi-header__list--right">
+            <!-- ngIf: $root.selectTime -->
+            <!-- ngIf: $root.selectSettings -->
+            <li class="flexi-header__item show-for-medium-up" ui-sref-active="flexi-header__item--active">
+                <search-form-small class="ng-isolate-scope"><div class="search-small">
+    <form name="searchForm" class="search-small__form ng-pristine ng-invalid ng-invalid-required ng-valid-maxlength">
+        <label class="search-small__label" for="player">
+            Player
+        </label>
+        <input class="search-small__input ng-pristine ng-untouched ng-invalid ng-invalid-required ng-valid-maxlength" type="text" name="player" maxlength="12" placeholder="Search for a player" autocorrect="off" spellcheck="false" required="" ng-model="player">
+        <button class="search-small__submit" type="submit" ng-click="findPlayer(player)" ng-disabled="!player" disabled="disabled"><i class="fa fa-search"></i></button>
+    </form>
+</div>
+</search-form-small>
+            </li>
+            <li class="flexi-header__item show-for-small-down" ui-sref-active="flexi-header__item--active">
+                <a ui-sref="search" href="https://apps.runescape.com/runemetrics/app/search"><i class="fa fa-search"></i></a>
+            </li>
+            <li class="flexi-header__item" ng-class="{&#39;flexi-header__item--active&#39; : userMenuActive}">
+                <div class="user-menu-toggle" ng-class="{&#39;user-menu-toggle--isActive&#39; : userMenuActive}" ng-click="toggleUserMenu()">
+                    <!-- ngIf: $root.player.name --><div class="user-menu-toggle-user ng-scope" ng-if="$root.player.name">
+                        <div class="header-avatar__circle-img-wrap">
+                            <!-- ngIf: $root.player.avatar --><img id="a-header-avatar" class="header-avatar__image ng-scope" ng-if="$root.player.avatar" ng-src="https://secure.runescape.com/m=avatar-rs/Alinthar/chat.png" alt="Alinthar avatar" title="Alinthar avatar" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/chat.png"><!-- end ngIf: $root.player.avatar -->
+                        </div>
+                    </div><!-- end ngIf: $root.player.name -->
+                    <!-- ngIf: !$root.player.name -->
+                </div>
+            </li>
+        </ul>
+        <ul class="text-center flexi-header__list flexi-header__list--left show-for-medium-down">
+            <li class="flexi-header__item flexi-header__item--active" ng-class="{&#39;flexi-header__item--active&#39; : mainMenuActive}">
+                <a ng-click="toggleMainMenu()" id="a-nav-hamburger"><i class="fa fa-bars"></i></a>
+            </li>
+        </ul>
+        <a id="a-main-logo" ui-sref="overview" href="https://apps.runescape.com/runemetrics/app/my-profile">
+            <h1 class="flexi-header__logo">
+                <img class="flexi-header__logo-image" srcset="/runemetrics/images/logos/runemetrics_logox2.225f8986.png" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/runemetrics_logox2.png" alt="RuneMetrics">
+                <img class="flexi-header__logo-image--small" srcset="/runemetrics/images/logos/runemetrics_iconx2.802fa2a1.png" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/runemetrics_logox2.225f8986.png" alt="RuneMetrics">
+            </h1>
+        </a>
+    </div>
+</div>
+
+<div class="user-menu ng-hide" ng-show="userMenuActive">
+    <ul class="user-menu__list" ng-click="toggleUserMenu()">
+        <!-- ngIf: searchedUser.loggedIn != 'false' --><li class="user-menu__item ng-scope" ng-if="searchedUser.loggedIn != &#39;false&#39;">
+            <a id="a-header-profile" class="user-menu__item-link medium-12 columns" ui-sref="overview" href="https://apps.runescape.com/runemetrics/app/my-profile">My Profile</a>
+        </li><!-- end ngIf: searchedUser.loggedIn != 'false' -->
+        <!-- ngIf: searchedUser.loggedIn == 'false' -->
+        <li class="user-menu__item">
+            <a id="a-header-runemetrics-pro" class="user-menu__item-link medium-12 columns" href="https://www.runescape.com/runemetrics" target="_blank">RuneMetrics Pro</a>
+        </li>
+        <!-- ngIf: searchedUser.loggedIn != 'false' --><li class="user-menu__item ng-scope" ng-if="searchedUser.loggedIn != &#39;false&#39;">
+            <a id="a-header-logout" class="user-menu__item-link medium-12 columns" ui-sref="logout" href="https://apps.runescape.com/runemetrics/app/logout">Logout</a>
+        </li><!-- end ngIf: searchedUser.loggedIn != 'false' -->
+    </ul>
+</div>
+
+<player-bar class="ng-isolate-scope"><div ng-show="searchedUser" class="searched-user-bar ng-hide">
+    <div class="searched-user-bar__block searched-user-bar__block--avatar">
+        <div class="header-avatar">
+            <div class="header-avatar__circle-img-wrap">
+                <!-- ngIf: searchedUser.avatar -->
+            </div>
+        </div>
+    </div>
+
+    <div class="searched-user-bar__block">
+        <div class="searched-user-bar__name ng-binding ng-hide" ng-show="searchedUser.name"></div>
+    </div>
+
+    <!-- ngIf: searchedUser.totalxp -->
+
+    <!-- ngIf: searchedUser.totalskill -->
+
+    <!-- ngIf: searchedUser.rank -->
+
+    <div class="searched-user-bar__block">
+        <div class="back-to-profile" ui-sref="overview" href="/runemetrics/app/my-profile">
+            <div class="back-to-profile__block back-to-profile__block--avatar">
+                <div class="header-avatar">
+                    <div class="header-avatar__circle-img-wrap">
+                        <!-- ngIf: $root.player.avatar --><img id="a-header-avatar" class="header-avatar__image ng-scope" ng-if="$root.player.avatar" ng-src="https://secure.runescape.com/m=avatar-rs/Alinthar/chat.png" alt="Alinthar avatar" title="Alinthar avatar" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/chat.png"><!-- end ngIf: $root.player.avatar -->
+                        <!-- ngIf: !$root.player.avatar -->
+                    </div>
+                </div>
+            </div>
+            <div class="back-to-profile__block">
+                <!-- ngIf: searchedUser.loggedIn != 'false' --><a id="back-to-profile__link" class="back-to-profile__link ng-scope" ng-if="searchedUser.loggedIn != &#39;false&#39;">My profile</a><!-- end ngIf: searchedUser.loggedIn != 'false' -->
+                <!-- ngIf: searchedUser.loggedIn == 'false' -->
+            </div>
+        </div>
+    </div>
+</div>
+</player-bar>
+
+<div class="app-header">
+    <main-menu role="navigation" class="main-menu ng-isolate-scope main-menu--active" ng-class="{&#39;main-menu--active&#39;: mainMenuActive}"><nav class="navigation">
+    <div class="navigation__close-bar">
+        <i id="navigation__close" class="fa fa-times navigation__close" aria-hidden="true" ng-click="closeLink()"></i>
+        <img id="navigation__logo" class="navigation__logo" srcset="/runemetrics/images/logos/runemetrics_logox2.225f8986.png" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/runemetrics_logox2.png" alt="RuneMetrics" ui-sref="overview" ng-click="closeLink()" href="/runemetrics/app/my-profile">
+    </div>
+    
+    <ul class="navigation__list ng-hide" ng-show="!searchedUser &amp;&amp; !loggedIn">
+        <li class="navigation__item ng-hide" ng-show="!loggedIn">
+            <a id="navigation__log-in" class="navigation__link navigation__link--login" ui-sref="overview" href="https://apps.runescape.com/runemetrics/app/my-profile">
+                Log in
+            </a>
+        </li>
+    </ul>
+
+    <ul class="navigation__list" ng-show="!searchedUser &amp;&amp; loggedIn">
+        <li class="navigation__item navigation__item--active" ui-sref-active="navigation__item--active">
+            <a id="navigation__summary" class="navigation__link navigation__link--summary" ui-sref="overview" ng-click="closeLink()" href="https://apps.runescape.com/runemetrics/app/my-profile">
+                Summary
+            </a>
+        </li>
+        <li class="navigation__item navigation__item--drop" ng-class="{&#39;navigation__item--dropped&#39;: dropdown.xp}">
+            <a id="navigation__xp" class="navigation__link navigation__link--xp" ng-click="toggleSwitch(&#39;xp&#39;);">
+                XP and Levels
+            </a>
+            <ul class="navigation__sub-list">
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__levels" class="navigation__sub-link" ui-sref="levels" href="https://apps.runescape.com/runemetrics/app/levels">Levels</a>
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__xp-month" class="navigation__sub-link" ui-sref="xp-gains-monthly" href="https://apps.runescape.com/runemetrics/app/xp-monthly/">XP Gain - Monthly</a>
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__xp-day" ui-sref="xp-gains-graph({skills: -1})" ng-click="closeLink()" ng-class="{&#39;navigation__unsubscribed&#39; : $root.user.subscribed == false, &#39;navigation__sub-link&#39; : $root.user.subscribed == true}" href="https://apps.runescape.com/runemetrics/app/xp-daily/-1" class="navigation__unsubscribed">
+                        <span class="navigation-span">XP Gain - Daily</span>
+                        <!-- ngIf: $root.user.subscribed == false --><i class="fa fa-lock ng-scope" aria-hidden="true" ng-if="$root.user.subscribed == false"></i><!-- end ngIf: $root.user.subscribed == false -->
+                        <!-- ngIf: $root.user.subscribed == false --><i class="fa fa-unlock-alt ng-scope" aria-hidden="true" ng-if="$root.user.subscribed == false"></i><!-- end ngIf: $root.user.subscribed == false -->
+                    </a>                    
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__sp-split" ui-sref="xp-gains" ng-click="closeLink()" ng-class="{&#39;navigation__unsubscribed&#39; : $root.user.subscribed == false, &#39;navigation__sub-link&#39; : $root.user.subscribed == true}" href="https://apps.runescape.com/runemetrics/app/xp-split" class="navigation__unsubscribed">
+                        <span class="navigation-span">XP Split</span>
+                        <!-- ngIf: $root.user.subscribed == false --><i class="fa fa-lock ng-scope" aria-hidden="true" ng-if="$root.user.subscribed == false"></i><!-- end ngIf: $root.user.subscribed == false -->
+                        <!-- ngIf: $root.user.subscribed == false --><i class="fa fa-unlock-alt ng-scope" aria-hidden="true" ng-if="$root.user.subscribed == false"></i><!-- end ngIf: $root.user.subscribed == false -->
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="navigation__item navigation__item--drop" ng-class="{&#39;navigation__item--dropped&#39;: dropdown.activity}">
+            <a id="navigation__activity" class="navigation__link navigation__link--activity" ng-click="toggleSwitch(&#39;activity&#39;);">Activity</a>
+            <ul class="navigation__sub-list">
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__event-log" class="navigation__sub-link" ui-sref="activities" href="https://apps.runescape.com/runemetrics/app/activities">Event Log</a>
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__quests" class="navigation__sub-link" ui-sref="quests" href="https://apps.runescape.com/runemetrics/app/quests">Quests</a>
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__wealth" ui-sref="wealth-change" ng-class="{&#39;navigation__unsubscribed&#39; : $root.user.subscribed == false, &#39;navigation__sub-link&#39; : $root.user.subscribed == true}" href="https://apps.runescape.com/runemetrics/app/wealth" class="navigation__unsubscribed">
+                        <span class="navigation-span">Wealth</span>
+                        <!-- ngIf: $root.user.subscribed == false --><i class="fa fa-lock ng-scope" aria-hidden="true" ng-if="$root.user.subscribed == false"></i><!-- end ngIf: $root.user.subscribed == false -->
+                        <!-- ngIf: $root.user.subscribed == false --><i class="fa fa-unlock-alt ng-scope" aria-hidden="true" ng-if="$root.user.subscribed == false"></i><!-- end ngIf: $root.user.subscribed == false -->
+                    </a>
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__kills-drops" ui-sref="pvm-kills" ng-class="{&#39;navigation__unsubscribed&#39; : $root.user.subscribed == false, &#39;navigation__sub-link&#39; : $root.user.subscribed == true}" href="https://apps.runescape.com/runemetrics/app/pvm-kills" class="navigation__unsubscribed">
+                        <span class="navigation-span">Kills and Drops</span>
+                        <!-- ngIf: $root.user.subscribed == false --><i class="fa fa-lock ng-scope" aria-hidden="true" ng-if="$root.user.subscribed == false"></i><!-- end ngIf: $root.user.subscribed == false -->
+                        <!-- ngIf: $root.user.subscribed == false --><i class="fa fa-unlock-alt ng-scope" aria-hidden="true" ng-if="$root.user.subscribed == false"></i><!-- end ngIf: $root.user.subscribed == false -->
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="navigation__item navigation__item--drop" ng-class="{&#39;navigation__item--dropped&#39;: dropdown.friends}">
+            <a id="navigation__friends" class="navigation__link navigation__link--friends" ng-click="toggleSwitch(&#39;friends&#39;);">
+                Friends
+            </a>
+            <ul class="navigation__sub-list">
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__friends-list" class="navigation__sub-link" ui-sref="friends" href="https://apps.runescape.com/runemetrics/app/friends">Friends List</a>
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__friends-log" class="navigation__sub-link" ui-sref="friends-activity" href="https://apps.runescape.com/runemetrics/app/friends-activity">Friends' Event Log</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <ul class="navigation__list ng-hide" ng-show="searchedUser">
+        <li class="navigation__item ng-hide" ng-show="!loggedIn">
+            <a id="navigation__log-in" class="navigation__link navigation__link--login" ui-sref="overview" href="https://apps.runescape.com/runemetrics/app/my-profile">
+                Log in
+            </a>
+        </li>
+        <li class="navigation__item" ui-sref-active="navigation__item--active">
+            <a id="navigation__summary" class="navigation__link navigation__link--summary" ui-sref="overview-searched-user({username: searchedUser})" href="https://apps.runescape.com/runemetrics/app/overview/player/false">
+                Summary
+            </a>
+        </li>
+        <li class="navigation__item navigation__item--drop" ng-class="{&#39;navigation__item--dropped&#39;: dropdown.xp}">
+            <a id="navigation__xp" class="navigation__link navigation__link--xp" ng-click="toggleSwitch(&#39;xp&#39;);">
+                XP and Levels
+            </a>
+            <ul class="navigation__sub-list">
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__levels" class="navigation__sub-link" ui-sref="levels-searched-user({username: searchedUser})" href="https://apps.runescape.com/runemetrics/app/levels/player/false">Levels</a>
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__xp-month" class="navigation__sub-link" ui-sref="xp-gains-monthly-searched-user({username: searchedUser, skills: -1})" href="https://apps.runescape.com/runemetrics/app/xp-monthly/player/false/-1">XP Gain - Monthly</a>
+                </li>
+            </ul>
+        </li>
+        <li class="navigation__item navigation__item--drop" ng-class="{&#39;navigation__item--dropped&#39;: dropdown.activity}">
+            <a id="navigation__activity" class="navigation__link navigation__link--activity" ng-click="toggleSwitch(&#39;activity&#39;);">
+                Activity
+            </a>
+            <ul class="navigation__sub-list">
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__event-log" class="navigation__sub-link" ui-sref="activities-searched-user({username: searchedUser})" href="https://apps.runescape.com/runemetrics/app/activities/player/false">Event Log</a>
+                </li>
+                <li class="navigation__sub-item" ui-sref-active="navigation__sub-item--active">
+                    <a id="navigation__quests" class="navigation__sub-link" ui-sref="quests-searched-user({username: searchedUser})" href="https://apps.runescape.com/runemetrics/app/quests/player/false">Quests</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <div class="navigation__foot">
+        <a id="navigation__rs-link" href="http://runescape.com/" target="_blank" class="navigation__foot-link">
+            RuneScape.com
+        </a>
+    </div>
+</nav>
+</main-menu>
+</div>
+</header>
+                        
+        <div class="content medium-12">
+            <loader-graphic class="ng-isolate-scope"><div class="loader ng-hide" ng-show="loading">
+    <div class="loader__background"></div>
+    <span class="loader-inner ball-clip-rotate-multiple"><div></div><div></div></span>
+</div>
+</loader-graphic>
+            <subscribe></subscribe>
+            <settings-menu class="ng-isolate-scope"><div class="settings-menu-toggle show-for-large-up ng-hide" ng-class="{&#39;settings-menu-toggle--isActive&#39; : isActive}" ng-show="isVisible">
+    <a class="settings-menu-toggle__btn row collapse" ng-click="toggleMenu()">
+        <div class="settings-menu-toggle__icon columns large-12" ng-class="{&#39;settings-menu-toggle__icon--isActive&#39; : isActive}">
+            <i class="fa fa-cog"></i>
+        </div>
+    </a>
+</div>
+
+<div class="settings-menu ng-hide" ng-show="isActive">
+    <form class="row ng-pristine ng-valid">
+        <span class="small-12 columns"><input id="personal" type="checkbox" ng-model="personalBestActive" ng-click="personalBestToggle()" class="ng-pristine ng-untouched ng-valid"><label for="personal">Show personal bests on charts</label></span>
+        <span class="small-12 columns"><input id="average" type="checkbox" ng-model="averageActive" ng-click="averageToggle()" class="ng-pristine ng-untouched ng-valid"><label for="average">Show averages on charts</label></span>
+        <!--<span class="small-12 columns"><input id="bonus" type="checkbox"><label for="bonus">Include Bonus XP</label></span>
+        <span class="small-12 columns"><input id="reward" type="checkbox"><label for="reward">Include Reward XP</label></span>-->
+    </form>
+</div>
+</settings-menu>
+            <!-- uiView: undefined --><ui-view class="ng-scope"><!-- ngIf: $root.player.name --><div class="content__wrapper content__wrapper--multiple ng-scope" ng-if="$root.player.name">
+    <div class="row"><loading class="ng-isolate-scope" style="display: none;"><div class="loading">
+    <i class="fa fa-cog fa-spin"></i>
+</div>
+</loading></div>
+    <div class="row summary-row" style="display: block;">
+        <div class="small-12 medium-4 columns summary-column">
+            <!-- ngIf: $root.player.name --><player ng-if="$root.player.name" class="ng-scope ng-isolate-scope"><div class="profile-block overview-block--name">
+    <div class="profile-block__circle-img-wrap">
+        <img class="profile-block__image" ng-src="https://secure.runescape.com/m=avatar-rs/Alinthar/chat.png" alt="Alinthar avatar" title="Alinthar avatar" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/chat.png">
+    </div>
+    <h2 class="profile-block__name ng-binding">Alinthar</h2>
+    <!-- ngIf: player.playtime --><div ng-if="player.playtime" class="profile-block__playtime ng-scope">Time played</div><!-- end ngIf: player.playtime -->
+    <!-- ngIf: player.playtime --><div ng-if="player.playtime" class="profile-block__time ng-binding ng-scope">9 days, 13 hours</div><!-- end ngIf: player.playtime -->
+</div>
+</player><!-- end ngIf: $root.player.name -->
+            <!-- ngIf: $root.player.activities --><activity ng-if="$root.player.activities" class="ng-scope ng-isolate-scope"><div class="activity-block">
+    <h2 class="activity-block__title">Activity</h2>
+
+    <ul class="activity-block__list">
+        <!-- ngRepeat: activity in player.activities | limitTo: 4 --><li id="a-activity-block__list-item--0" class="activity-block__list-item ng-scope" ng-repeat="activity in player.activities | limitTo: 4">
+            <div class="activity-block__activity ng-binding">Levelled up Constitution.</div>
+            <div class="activity-block__time ng-binding">
+                <i class="fa fa-clock-o"></i> 28-Oct-2021 15:05
+            </div>
+        </li><!-- end ngRepeat: activity in player.activities | limitTo: 4 --><li id="a-activity-block__list-item--1" class="activity-block__list-item ng-scope" ng-repeat="activity in player.activities | limitTo: 4">
+            <div class="activity-block__activity ng-binding">Completed a tetracompass.</div>
+            <div class="activity-block__time ng-binding">
+                <i class="fa fa-clock-o"></i> 28-Oct-2021 00:01
+            </div>
+        </li><!-- end ngRepeat: activity in player.activities | limitTo: 4 --><li id="a-activity-block__list-item--2" class="activity-block__list-item ng-scope" ng-repeat="activity in player.activities | limitTo: 4">
+            <div class="activity-block__activity ng-binding">Levelled up Slayer.</div>
+            <div class="activity-block__time ng-binding">
+                <i class="fa fa-clock-o"></i> 27-Oct-2021 18:11
+            </div>
+        </li><!-- end ngRepeat: activity in player.activities | limitTo: 4 --><li id="a-activity-block__list-item--3" class="activity-block__list-item ng-scope" ng-repeat="activity in player.activities | limitTo: 4">
+            <div class="activity-block__activity ng-binding">Levelled up Strength.</div>
+            <div class="activity-block__time ng-binding">
+                <i class="fa fa-clock-o"></i> 27-Oct-2021 17:45
+            </div>
+        </li><!-- end ngRepeat: activity in player.activities | limitTo: 4 -->
+    </ul>
+    <!-- ngIf: searched != true --><a ng-if="searched != true" class="activity-block__base-link ng-scope" ui-sref="activities" href="https://apps.runescape.com/runemetrics/app/activities">All activity</a><!-- end ngIf: searched != true -->
+</div>
+</activity><!-- end ngIf: $root.player.activities -->
+        </div>
+        <div class="small-12 medium-4 columns">
+            <!-- ngIf: $root.player.totalskill --><skills ng-if="$root.player.totalskill" class="ng-scope ng-isolate-scope"><div class="skills-block">
+    <h2 class="skills-block__title">Skills</h2>
+    <div class="skills-block__stat-title">
+        Total Level<span id="a-skills-block__stat--total-level" class="skills-block__player-stat ng-binding">833</span>
+    </div>
+    <div class="skills-block__stat-title">
+        Total XP <span id="a-skills-block__stat--total-xp" class="skills-block__player-stat ng-binding">5,943,630</span>
+    </div>
+    <!-- ngIf: player.rank --><div class="skills-block__stat-title ng-scope" ng-if="player.rank">
+        Rank <span id="a-skills-block__stat--rank" class="skills-block__player-stat ng-binding">880,557</span>
+    </div><!-- end ngIf: player.rank -->
+    <div class="skills-block__stat-title">
+        Combat Level<span id="a-skills-block__stat--level" class="skills-block__player-stat ng-binding">61</span>
+    </div>
+    <div class="skills-block__skills-container">
+        <ul class="skills-block__list">
+            <!-- ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Archaeology" class="skills-block__icon skills-block__icon--archaeology">85</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Mining" class="skills-block__icon skills-block__icon--mining">70</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Smithing" class="skills-block__icon skills-block__icon--smithing">68</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Fishing" class="skills-block__icon skills-block__icon--fishing">62</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Magic" class="skills-block__icon skills-block__icon--magic">52</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Defence" class="skills-block__icon skills-block__icon--defence">51</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Attack" class="skills-block__icon skills-block__icon--attack">49</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Strength" class="skills-block__icon skills-block__icon--strength">49</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Dungeoneering" class="skills-block__icon skills-block__icon--dungeoneering">46</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Constitution" class="skills-block__icon skills-block__icon--constitution">43</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Woodcutting" class="skills-block__icon skills-block__icon--woodcutting">38</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Slayer" class="skills-block__icon skills-block__icon--slayer">37</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Cooking" class="skills-block__icon skills-block__icon--cooking">37</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Runecrafting" class="skills-block__icon skills-block__icon--runecrafting">28</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Prayer" class="skills-block__icon skills-block__icon--prayer">27</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Crafting" class="skills-block__icon skills-block__icon--crafting">26</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Firemaking" class="skills-block__icon skills-block__icon--firemaking">19</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Fletching" class="skills-block__icon skills-block__icon--fletching">15</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Ranged" class="skills-block__icon skills-block__icon--ranged">10</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Summoning" class="skills-block__icon skills-block__icon--summoning">9</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Herblore" class="skills-block__icon skills-block__icon--herblore">3</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Agility" class="skills-block__icon skills-block__icon--agility">2</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Construction" class="skills-block__icon skills-block__icon--construction">2</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Farming" class="skills-block__icon skills-block__icon--farming">1</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Thieving" class="skills-block__icon skills-block__icon--thieving">1</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Invention" class="skills-block__icon skills-block__icon--invention">1</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Divination" class="skills-block__icon skills-block__icon--divination">1</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues --><li class="skills-block__item ng-scope" ng-repeat="skill in player.skillvalues">
+                <div title="Hunter" class="skills-block__icon skills-block__icon--hunter">1</div>
+            </li><!-- end ngRepeat: skill in player.skillvalues -->
+        </ul>
+    </div>
+    <!-- ngIf: searched != true --><a ng-if="searched != true" class="skills-block__base-link ng-scope" ui-sref="levels" href="https://apps.runescape.com/runemetrics/app/levels">All levels</a><!-- end ngIf: searched != true -->
+</div>
+</skills><!-- end ngIf: $root.player.totalskill -->
+        </div>
+        <div class="small-12 medium-4 columns">
+            <!-- ngIf: $root.player.clan.member --><clan ng-if="$root.player.clan.member" class="ng-scope ng-isolate-scope"><div class="clan-block">
+    <a id="clan-link" target="_blank" href="https://apps.runescape.com/runemetrics/app/">
+        <img class="clan-block__banner" title=" avatar" alt=" avatar">
+        <h3 class="clan-block__clan-name ng-binding"></h3>
+    </a>
+</div>
+</clan><!-- end ngIf: $root.player.clan.member -->
+            <!-- ngIf: $root.player.questscomplete --><quests ng-if="$root.player.questscomplete" class="ng-scope ng-isolate-scope"><div class="quests-block">
+    <h2 class="quests-block__title ">Quests</h2>
+    <div class="quests-block__container">
+        <div id="pie-chart" class="pie-chart dc-chart">
+            <!-- Filled automatically -->
+        <svg width="200" height="150"><g transform="translate(100,75)"><g class="pie-slice _0"><path fill="#e1bb34" d="M4.592425496802574e-15,-75A75,75 0 0,1 9.186751533872616,-74.43523088064475L5.51205092032357,-44.66113852838685A45,45 0 0,0 2.7554552980815448e-15,-45Z"></path><title>Quests Complete: 6</title></g><g class="pie-slice _1"><path fill="#34bdd1" d="M9.186751533872616,-74.43523088064475A75,75 0 0,1 9.186751533872616,-74.43523088064475L5.51205092032357,-44.66113852838685A45,45 0 0,0 5.51205092032357,-44.66113852838685Z"></path><title>Quests in progress: 0</title></g><g class="pie-slice _2"><path fill="#c52037" d="M9.186751533872616,-74.43523088064475A75,75 0 1,1 -1.3777276490407723e-14,-75L-8.266365894244634e-15,-45A45,45 0 1,0 5.51205092032357,-44.66113852838685Z"></path><title>Quests not started: 301</title></g></g></svg></div>
+        <div class="quests-block__header">
+            <div class="quests-block__key" style="background: #e1bb34"></div>
+            Completed:
+            <span id="quests-block__quest-stat--complete" class="quests-block__quest-stat ng-binding">6</span>
+        </div>
+        <div class="quests-block__header">
+            <div class="quests-block__key" style="background: #34bdd1"></div>
+            In Progress:
+            <span id="quests-block__quest-stat--in-progress" class="quests-block__quest-stat ng-binding">0</span>
+        </div>
+        <div class="quests-block__header">
+            <div class="quests-block__key" style="background: #c52037"></div>
+            Not Started:
+            <span id="quests-block__quest-stat--not-started" class="quests-block__quest-stat ng-binding">301</span>
+        </div>
+    </div>
+    <!-- ngIf: searched != true --><a ng-if="searched != true" class="activity-block__base-link ng-scope" ui-sref="quests" href="https://apps.runescape.com/runemetrics/app/quests">All quests</a><!-- end ngIf: searched != true -->
+</div>
+</quests><!-- end ngIf: $root.player.questscomplete -->
+        </div>
+    </div>
+</div><!-- end ngIf: $root.player.name -->
+
+<!-- ngIf: $root.user.subscribed == true -->
+
+<subscribe-banner class="ng-scope ng-isolate-scope"><!-- ngIf: display -->
+</subscribe-banner>
+</ui-view>
+            <footer class="ng-isolate-scope"><div class="footer">
+    <div class="footer__logo-wrap">
+        <a href="http://www.runescape.com/" target="_blank" id="a-footer-runescape-link" class="footer__logo-link">
+            <img src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/runescape-grey.2edce928.svg" title="RuneScape" alt="RuneScape" class="footer__logo">
+        </a>
+        <a href="http://www.jagex.com/" target="_blank" id="a-footer-jagex-link" class="footer__logo-link">
+            <img src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/jagex-grey.2408b92f.svg" title="Jagex" alt="Jagex" class="footer__logo">
+        </a>
+    </div>
+    All times and dates are game time.
+    <div>
+        <span class="footer__copyright">© 2021 Jagex Ltd.</span>
+        <a href="http://www.jagex.com/g=runescape/terms/terms.ws" target="_blank" id="a-footer-terms-link" class="footer__link">Terms and Conditions</a>
+        <a href="http://www.jagex.com/g=runescape/privacy/privacy.ws" target="_blank" id="a-footer-privacy-link" class="footer__link">Privacy Policy</a>
+        <a href="https://play.runescape.com/cookies" target="_blank" id="a-footer-cookies-link" class="footer__link">Cookies</a>
+    </div>
+</div>
+</footer>
+        </div>
+        
+        <script src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/d.vendor.d2d133ea.js.download" type="text/javascript"></script>
+
+        <script src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/d.app.15f05f72.js.download" type="text/javascript"></script>
+	
+
+<iframe name="__uspapiLocator" tabindex="-1" role="presentation" aria-hidden="true" title="Blank" style="display: none; position: absolute; width: 1px; height: 1px; top: -9999px;" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/saved_resource.html"></iframe><iframe tabindex="-1" role="presentation" aria-hidden="true" title="Blank" src="./My Profile - RuneMetrics - RuneScape player stat tracking_files/bc-v3.min.html" style="position: absolute; width: 1px; height: 1px; top: -9999px;"></iframe></body></html>
