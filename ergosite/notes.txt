@@ -10,3 +10,6 @@ https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/skeleton_websi
 https://faun.pub/dynamic-website-with-django-55db56c1068a
 https://stackoverflow.com/questions/19698796/insert-script-to-run-on-serving-a-template-page-with-django
 https://stackoverflow.com/questions/38999015/execute-a-python-script-in-django-webpage
+
+
+https://stackoverflow.com/questions/54438473/how-to-execute-file-py-on-html-button-press-using-django
