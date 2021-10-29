@@ -5,7 +5,7 @@ sys.path.append(parentdir)
 #
 #
 import sqlite3 as sq
-ergodb = sq.connect(f'{currentdir}\Alinthar-API.sqlite')
+ergodb = sq.connect(f'{currentdir}\Ergo-API.sqlite')
 ergocon = ergodb.cursor()
 ergocon.execute('''CREATE TABLE "data" (
 	"name"	TEXT,
@@ -20,6 +20,6 @@ ergocon.execute('''CREATE TABLE "data" (
 	"totalskill"	INTEGER,
 	"magic"	INTEGER,
 	"polltime"	TEXT,
-	"skills"	TEXT,
+	"skills"	json,
 	PRIMARY KEY("polltime")
 );''')

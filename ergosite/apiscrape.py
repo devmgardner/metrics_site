@@ -14,8 +14,9 @@ for name in names:
     dbname = os.path.join(currentdir, f'{name}-API.sqlite')
     dbcon = sq.connect(dbname)
     dbcur = dbcon.cursor()
-    insertdata = (data['name'], data['rank'], data['melee'], data['combatlevel'], data['ranged'], data['totalxp'], data['questscomplete'], data['questsnotstarted'], data['questsstarted'], data['totalskill'], data['magic'], f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC', data['skillvalues'])
+    insertdata = (data['name'], data['rank'], data['melee'], data['combatlevel'], data['ranged'], data['totalxp'], data['questscomplete'], data['questsnotstarted'], data['questsstarted'], data['totalskill'], data['magic'], f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC', json.dumps(data['skillvalues']))
     insertcommand = 'INSERT INTO data (name, rank, melee, combatlevel, ranged, totalxp, questscomplete, questsnotstarted, questsstarted, totalskill, magic, polltime, skills) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
+    print(type(data['skillvalues']))
     dbcur.execute(insertcommand, insertdata)
     dbcon.commit()
     dbcon.close()
