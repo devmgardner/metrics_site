@@ -5,12 +5,12 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 #
-fname = f'{currentdir}/alintharscrape-log.txt'
+fname = f'{currentdir}\\alintharscrape-log.txt'
 try:
     fhand = open(fname, 'a')
 except FileNotFoundError:
     fhand = open(fname, 'w')
-ergocon = sq.connect(f'{currentdir}/alinthar.sqlite')
+ergocon = sq.connect(f'{currentdir}\\alinthar.sqlite')
 ergocur = ergocon.cursor()
 
 
