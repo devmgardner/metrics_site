@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Runescape 3 - {{ name }}</title>
+  <title>Runescape - {{ name }}</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -127,150 +127,372 @@
           <div class="col-lg-6" data-aos="fade-up">
             <div class="resume-item pb-0">
               <h3>Attack</h3>
-              <h4>Level {{ skills.Attack }}</h4>
-              <h4>XP {{ xp.Attack }}</h4>
+              {% if skills.Attack > 98 %}
+                {% if xp.Attack > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Attack }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Attack }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Attack }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Attack }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Attack }}</h4>
+                <h4>XP {{ xp.Attack }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Defence</h3>
-              <h4>Level {{ skills.Defence }}</h4>
-              <h4>XP {{ xp.Defence }}</h4>
+              {% if skills.Defence > 98 %}
+                {% if xp.Defence > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Defence }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Defence }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Defence }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Defence }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Defence }}</h4>
+                <h4>XP {{ xp.Defence }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Strength</h3>
+              <{% if skills.Strength > 98 %}
+              {% if xp.Strength > 199999999 %}
+                <h4 style="color: royalblue;">Level {{ skills.Strength }}</h4>
+                <h4 style="color: royalblue;">XP {{ xp.Strength }}</h4>
+              {% else %}
+                <h4 style="color: lime;">Level {{ skills.Strength }}</h4>
+                <h4 style="color: lime;">XP {{ xp.Strength }}</h4>
+            {% else %}
               <h4>Level {{ skills.Strength }}</h4>
               <h4>XP {{ xp.Strength }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Constitution</h3>
-              <h4>Level {{ skills.Constitution }}</h4>
-              <h4>XP {{ xp.Constitution }}</h4>
+              {% if skills.Constitution > 98 %}
+                {% if xp.Constitution > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Constitution }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Constitution }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Constitution }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Constitution }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Constitution }}</h4>
+                <h4>XP {{ xp.Constitution }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Ranged</h3>
-              <h4>Level {{ skills.Ranged }}</h4>
-              <h4>XP {{ xp.Ranged }}</h4>
+              {% if skills.Ranged > 98 %}
+                {% if xp.Ranged > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Ranged }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Ranged }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Ranged }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Ranged }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Ranged }}</h4>
+                <h4>XP {{ xp.Ranged }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Prayer</h3>
-              <h4>Level {{ skills.Prayer }}</h4>
-              <h4>XP {{ xp.Prayer }}</h4>
+              {% if skills.Prayer > 98 %}
+                {% if xp.Prayer > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Prayer }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Prayer }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Prayer }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Prayer }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Prayer }}</h4>
+                <h4>XP {{ xp.Prayer }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Magic</h3>
-              <h4>Level {{ skills.Magic }}</h4>
-              <h4>XP {{ xp.Magic }}</h4>
+              {% if skills.Magic > 98 %}
+                {% if xp.Magic > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Magic }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Magic }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Magic }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Magic }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Magic }}</h4>
+                <h4>XP {{ xp.Magic }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Cooking</h3>
-              <h4>Level {{ skills.Cooking }}</h4>
-              <h4>XP {{ xp.Cooking }}</h4>
+              {% if skills.Cooking > 98 %}
+                {% if xp.Cooking > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Cooking }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Cooking }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Cooking }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Cooking }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Cooking }}</h4>
+                <h4>XP {{ xp.Cooking }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Woodcutting</h3>
-              <h4>Level {{ skills.Woodcutting }}</h4>
-              <h4>XP {{ xp.Woodcutting }}</h4>
+              {% if skills.Woodcutting > 98 %}
+                {% if xp.Woodcutting > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Woodcutting }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Woodcutting }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Woodcutting }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Woodcutting }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Woodcutting }}</h4>
+                <h4>XP {{ xp.Woodcutting }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Fletching</h3>
-              <h4>Level {{ skills.Fletching }}</h4>
-              <h4>XP {{ xp.Fletching }}</h4>
+              {% if skills.Fletching > 98 %}
+                {% if xp.Fletching > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Fletching }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Fletching }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Fletching }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Fletching }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Fletching }}</h4>
+                <h4>XP {{ xp.Fletching }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Fishing</h3>
-              <h4>Level {{ skills.Fishing }}</h4>
-              <h4>XP {{ xp.Fishing }}</h4>
+              {% if skills.Fishing > 98 %}
+                {% if xp.Fishing > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Fishing }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Fishing }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Fishing }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Fishing }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Fishing }}</h4>
+                <h4>XP {{ xp.Fishing }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Firemaking</h3>
-              <h4>Level {{ skills.Firemaking }}</h4>
-              <h4>XP {{ xp.Firemaking }}</h4>
+              {% if skills.Firemaking > 98 %}
+                {% if xp.Firemaking > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Firemaking }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Firemaking }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Firemaking }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Firemaking }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Firemaking }}</h4>
+                <h4>XP {{ xp.Firemaking }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Crafting</h3>
-              <h4>Level {{ skills.Crafting }}</h4>
-              <h4>XP {{ xp.Crafting }}</h4>
+              {% if skills.Crafting > 98 %}
+                {% if xp.Crafting > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Crafting }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Crafting }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Crafting }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Crafting }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Crafting }}</h4>
+                <h4>XP {{ xp.Crafting }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Smithing</h3>
-              <h4>Level {{ skills.Smithing }}</h4>
-              <h4>XP {{ xp.Smithing }}</h4>
+              {% if skills.Smithing > 98 %}
+                {% if xp.Smithing > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Smithing }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Smithing }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Smithing }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Smithing }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Smithing }}</h4>
+                <h4>XP {{ xp.Smithing }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Mining</h3>
-              <h4>Level {{ skills.Mining }}</h4>
-              <h4>XP {{ xp.Mining }}</h4>
+              {% if skills.Mining > 98 %}
+                {% if xp.Mining > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Mining }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Mining }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Mining }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Mining }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Mining }}</h4>
+                <h4>XP {{ xp.Mining }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Herblore</h3>
-              <h4>Level {{ skills.Herblore }}</h4>
-              <h4>XP {{ xp.Herblore }}</h4>
+              {% if skills.Herblore > 119 %}
+                {% if xp.Herblore > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Herblore }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Herblore }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Herblore }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Herblore }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Herblore }}</h4>
+                <h4>XP {{ xp.Herblore }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Agility</h3>
-              <h4>Level {{ skills.Agility }}</h4>
-              <h4>XP {{ xp.Agility }}</h4>
+              {% if skills.Agility > 98 %}
+                {% if xp.Agility > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Agility }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Agility }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Agility }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Agility }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Agility }}</h4>
+                <h4>XP {{ xp.Agility }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Thieving</h3>
-              <h4>Level {{ skills.Thieving }}</h4>
-              <h4>XP {{ xp.Thieving }}</h4>
+              {% if skills.Thieving > 98 %}
+                {% if xp.Thieving > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Thieving }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Thieving }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Thieving }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Thieving }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Thieving }}</h4>
+                <h4>XP {{ xp.Thieving }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Slayer</h3>
-              <h4>Level {{ skills.Slayer }}</h4>
-              <h4>XP {{ xp.Slayer }}</h4>
+              {% if skills.Slayer > 119 %}
+                {% if xp.Slayer > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Slayer }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Slayer }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Slayer }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Slayer }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Slayer }}</h4>
+                <h4>XP {{ xp.Slayer }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Farming</h3>
-              <h4>Level {{ skills.Farming }}</h4>
-              <h4>XP {{ xp.Farming }}</h4>
+              {% if skills.Farming > 119 %}
+                {% if xp.Farming > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Farming }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Farming }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Farming }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Farming }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Farming }}</h4>
+                <h4>XP {{ xp.Farming }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Runecrafting</h3>
-              <h4>Level {{ skills.Runecrafting }}</h4>
-              <h4>XP {{ xp.Runecrafting }}</h4>
+              {% if skills.Runecrafting > 98 %}
+                {% if xp.Runecrafting > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Runecrafting }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Runecrafting }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Runecrafting }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Runecrafting }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Runecrafting }}</h4>
+                <h4>XP {{ xp.Runecrafting }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Hunter</h3>
-              <h4>Level {{ skills.Hunter }}</h4>
-              <h4>XP {{ xp.Hunter }}</h4>
+              {% if skills.Hunter > 98 %}
+                {% if xp.Hunter > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Hunter }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Hunter }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Hunter }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Hunter }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Hunter }}</h4>
+                <h4>XP {{ xp.Hunter }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Construction</h3>
-              <h4>Level {{ skills.Construction }}</h4>
-              <h4>XP {{ xp.Construction }}</h4>
+              {% if skills.Construction > 98 %}
+                {% if xp.Construction > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Construction }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Construction }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Construction }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Construction }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Construction }}</h4>
+                <h4>XP {{ xp.Construction }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Summoning</h3>
-              <h4>Level {{ skills.Summoning }}</h4>
-              <h4>XP {{ xp.Summoning }}</h4>
+              {% if skills.Summoning > 98 %}
+                {% if xp.Summoning > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Summoning }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Summoning }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Summoning }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Summoning }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Summoning }}</h4>
+                <h4>XP {{ xp.Summoning }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Dungeoneering</h3>
-              <h4>Level {{ skills.Dungeoneering }}</h4>
-              <h4>XP {{ xp.Dungeoneering }}</h4>
+              {% if skills.Dungeoneering > 119 %}
+                {% if xp.Dungeoneering > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Dungeoneering }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Dungeoneering }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Dungeoneering }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Dungeoneering }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Dungeoneering }}</h4>
+                <h4>XP {{ xp.Dungeoneering }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Divination</h3>
-              <h4>Level {{ skills.Divination }}</h4>
-              <h4>XP {{ xp.Divination }}</h4>
+              {% if skills.Divination > 98 %}
+                {% if xp.Divination > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Divination }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Divination }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Divination }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Divination }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Divination }}</h4>
+                <h4>XP {{ xp.Divination }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Invention</h3>
-              <h4>Level {{ skills.Invention }}</h4>
-              <h4>XP {{ xp.Invention }}</h4>
+              {% if skills.Invention > 119 %}
+                {% if xp.Invention > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Invention }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Invention }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Invention }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Invention }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Invention }}</h4>
+                <h4>XP {{ xp.Invention }}</h4>
             </div>
             <div class="resume-item pb-0">
               <h3>Archaeology</h3>
-              {% if skills.Archaeology > 99 %}
-                <h4 style="color:red">Level {{ skills.Archaeology }}</h4>
-              {% endif %}
-              <h4>XP {{ xp.Archaeology }}</h4>
+              {% if skills.Archaeology > 119 %}
+                {% if xp.Archaeology > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Archaeology }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Archaeology }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Archaeology }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Archaeology }}</h4>
+              {% else %}
+                <h4>Level {{ skills.Archaeology }}</h4>
+                <h4>XP {{ xp.Archaeology }}</h4>
             </div>
 
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">stuff will end up going here</h3>
+            <h3 class="resume-title" style="color:#e1bb34;">stuff will end up going here</h3>
             <!-- <div class="resume-item"> -->
             <!--   <h4>Information Technology Support Engineer</h4> -->
             <!--   <h5>Sep 2021 - Present</h5> -->
