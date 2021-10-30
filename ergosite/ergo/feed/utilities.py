@@ -63,4 +63,4 @@ def apiscrape(u):
     data = rq.get(url).json()
     #with open(f'{currentdir}\{u}.txt','w') as fhand:
     #    json.dump(data, fhand, indent=2)
-    return [data['combatlevel'], data['totalskill'], data['totalxp'], data['rank'], data['skillvalues']]
+    return [data['combatlevel'], data['totalskill'], data['totalxp'], "{:,}".format(int(re.sub(",", "", data['rank']))), data['skillvalues'], data['questscomplete'], data['questsstarted'], data['questsnotstarted']]

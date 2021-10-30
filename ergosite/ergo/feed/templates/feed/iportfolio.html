@@ -46,7 +46,7 @@
     <div class="d-flex flex-column">
 
       <div class="profile">
-        <img src="{% static 'iportfolio/assets/img/profile-img.jpg' %}" alt="" class="img-fluid rounded-circle">
+        <img src="{% static 'iportfolio/assets/img/RS_Rune_final.png' %}" alt="" class="img-fluid rounded-circle">
         <h1 class="text-light"><a href="iportfolio.html">Ergo</a></h1>
       </div>
 
@@ -98,14 +98,6 @@
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch" data-aos="fade-up" data-aos-delay="300">
-            <div class="count-box">
-              <i class="bi bi-people"></i>
-              <span data-purecounter-start="0" data-purecounter-end="{{ rank }}" data-purecounter-duration="1" class="purecounter"></span>
-              <p><strong>Current Rank</strong></p>
-            </div>
-          </div>
-
         </div>
 
       </div>
@@ -116,62 +108,8 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Skills</h2>
-          <p>Below are some of my major skills, though this is far from comprehensive.</p>
-        </div>
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up">
-
-            <div class="progress">
-              <span class="skill">Customer Service <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Team Leadership <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Troubleshooting <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-
-            <div class="progress">
-              <span class="skill">Technical Support <i class="val">95%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Python <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div class="progress">
-              <span class="skill">Bash <i class="val">75%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
+          <h2>Quests</h2>
+          <p>Out of 307 quests possible, this character has completed {{ questscomplete }} ({{ questspercent}}%)</p>
         </div>
 
       </div>
@@ -182,58 +120,166 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Resume</h2>
-          <p>Feel free to reach out, as I could surely benefit your company as well.</p>
+          <h2>All Skill Levels</h2>
         </div>
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up">
-            <h3 class="resume-title">Summary</h3>
             <div class="resume-item pb-0">
-              <h4>Thomas Portz</h4>
-              <p><em>Dedicated and team-focused individual, ready and able to support others at any moment.</em></p>
-              <ul>
-                <li>(863) 214-5968</li>
-                <li>thomas@portz.dev</li>
-              </ul>
+              <h4>Attack</h4>
+              <h4>Level {{ skills.Attack }}</h4>
+              <h4>XP {{ xp.Attack }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Defence</h4>
+              <h4>Level {{ skills.Defence }}</h4>
+              <h4>XP {{ xp.Defence }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Strength</h4>
+              <h4>Level {{ skills.Strength }}</h4>
+              <h4>XP {{ xp.Strength }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Constitution</h4>
+              <h4>Level {{ skills.Constitution }}</h4>
+              <h4>XP {{ xp.Constitution }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Ranged</h4>
+              <h4>Level {{ skills.Ranged }}</h4>
+              <h4>XP {{ xp.Ranged }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Prayer</h4>
+              <h4>Level {{ skills.Prayer }}</h4>
+              <h4>XP {{ xp.Prayer }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Magic</h4>
+              <h4>Level {{ skills.Magic }}</h4>
+              <h4>XP {{ xp.Magic }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Cooking</h4>
+              <h4>Level {{ skills.Cooking }}</h4>
+              <h4>XP {{ xp.Cooking }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Woodcutting</h4>
+              <h4>Level {{ skills.Woodcutting }}</h4>
+              <h4>XP {{ xp.Woodcutting }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Fletching</h4>
+              <h4>Level {{ skills.Fletching }}</h4>
+              <h4>XP {{ xp.Fletching }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Fishing</h4>
+              <h4>Level {{ skills.Fishing }}</h4>
+              <h4>XP {{ xp.Fishing }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Firemaking</h4>
+              <h4>Level {{ skills.Firemaking }}</h4>
+              <h4>XP {{ xp.Firemaking }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Crafting</h4>
+              <h4>Level {{ skills.Crafting }}</h4>
+              <h4>XP {{ xp.Crafting }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Smithing</h4>
+              <h4>Level {{ skills.Smithing }}</h4>
+              <h4>XP {{ xp.Smithing }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Mining</h4>
+              <h4>Level {{ skills.Mining }}</h4>
+              <h4>XP {{ xp.Mining }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Herblore</h4>
+              <h4>Level {{ skills.Herblore }}</h4>
+              <h4>XP {{ xp.Herblore }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Agility</h4>
+              <h4>Level {{ skills.Agility }}</h4>
+              <h4>XP {{ xp.Agility }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Thieving</h4>
+              <h4>Level {{ skills.Thieving }}</h4>
+              <h4>XP {{ xp.Thieving }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Slayer</h4>
+              <h4>Level {{ skills.Slayer }}</h4>
+              <h4>XP {{ xp.Slayer }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Farming</h4>
+              <h4>Level {{ skills.Farming }}</h4>
+              <h4>XP {{ xp.Farming }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Runecrafting</h4>
+              <h4>Level {{ skills.Runecrafting }}</h4>
+              <h4>XP {{ xp.Runecrafting }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Hunter</h4>
+              <h4>Level {{ skills.Hunter }}</h4>
+              <h4>XP {{ xp.Hunter }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Construction</h4>
+              <h4>Level {{ skills.Construction }}</h4>
+              <h4>XP {{ xp.Construction }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Summoning</h4>
+              <h4>Level {{ skills.Summoning }}</h4>
+              <h4>XP {{ xp.Summoning }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Dungeoneering</h4>
+              <h4>Level {{ skills.Dungeoneering }}</h4>
+              <h4>XP {{ xp.Dungeoneering }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Divination</h4>
+              <h4>Level {{ skills.Divination }}</h4>
+              <h4>XP {{ xp.Divination }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Invention</h4>
+              <h4>Level {{ skills.Invention }}</h4>
+              <h4>XP {{ xp.Invention }}</h4>
+            </div>
+            <div class="resume-item pb-0">
+              <h4>Archaeology</h4>
+              <h4>Level {{ skills.Archaeology }}</h4>
+              <h4>XP {{ xp.Archaeology }}</h4>
             </div>
 
-            <h3 class="resume-title">Education</h3>
-            <div class="resume-item">
-              <h4>Bachelor of Science &amp; Human Factors Psychology</h4>
-              <h5>2007 - 2011</h5>
-              <p><em>Embry-Riddle Aeronautical University</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title">Professional Experience</h3>
-            <div class="resume-item">
-              <h4>Information Technology Support Engineer</h4>
-              <h5>Sep 2021 - Present</h5>
-              <p><em>TechnologyAdvice, Nashville, TN </em></p>
-              <ul>
-                <li>idk yet</li>
-                <li>it's not listed on linkedin</li>
-                <li>i'll fill stuff in here whenever you tell me</li>
-                <li>what do you do at your job lol</li>
-              </ul>
-            </div>
-            <div class="resume-item">
-              <h4>Senior Service Desk Analyst</h4>
-              <h5>Apr 2018 - Sep 2021</h5>
-              <p><em>Masrch & McLennan Companies, Louisville, KY</em></p>
-              <ul>
-                <li>Provide accurate and complete information for incident reporting and resource requests</li>
-                <li>Perform primary troubleshooting and ensure resolution in as many cases as possible</li>
-                <li>Liaise with second and third tier support teams to resolve more complex or specialized issues</li>
-                <li>Ensure complete adherence to ticket quality and incident management process standards</li>
-                <li>Identify major service disruptions and engage all necessary resources to minimize downtime</li>
-                <li>Educate colleagues on self-service processes and incident/request time to resolution goals</li>
-                <li>Compensate for inbound traffic fluctuations and make on-the-fly adjustments to manage queue hold times</li>
-                <li>Support process and operating environment changes by monitoring and highlighting post-change incidents</li>
-              </ul>
-            </div>
+            <h3 class="resume-title">stuff will end up going here</h3>
+            <!-- <div class="resume-item"> -->
+            <!--   <h4>Information Technology Support Engineer</h4> -->
+            <!--   <h5>Sep 2021 - Present</h5> -->
+            <!--   <p><em>TechnologyAdvice, Nashville, TN </em></p> -->
+            <!--   <ul> -->
+            <!--     <li>idk yet</li> -->
+            <!--     <li>it's not listed on linkedin</li> -->
+            <!--     <li>i'll fill stuff in here whenever you tell me</li> -->
+            <!--     <li>what do you do at your job lol</li> -->
+            <!--   </ul> -->
+            <!-- </div> -->
           </div>
         </div>
 
@@ -242,22 +288,6 @@
 
 
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>iPortfolio</span></strong>
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End  Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
