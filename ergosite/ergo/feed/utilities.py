@@ -64,3 +64,13 @@ def apiscrape(u):
     #with open(f'{currentdir}\{u}.txt','w') as fhand:
     #    json.dump(data, fhand, indent=2)
     return [data['combatlevel'], data['totalskill'], data['totalxp'], "{:,}".format(int(re.sub(",", "", data['rank']))), data['skillvalues'], data['questscomplete'], data['questsstarted'], data['questsnotstarted']]
+
+def quests(u):
+    currentdir = os.path.dirname(os.path.realpath(__file__))
+    parentdir = os.path.dirname(currentdir)
+    sys.path.append(parentdir)
+    url = 'https://apps.runescape.com/runemetrics/quests?user=' + u
+    data = rq.get(url).json()
+    return data['quests']
+    #with open(os.path.join(currentdir, f'{u}-quests.txt'), 'w') as fhand:
+    #    json.dump(data, fhand, indent=2)
