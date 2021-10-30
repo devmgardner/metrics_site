@@ -20,15 +20,9 @@ for name in names:
     dbcur.execute(insertcommand, insertdata)
     dbcon.commit()
     dbcon.close()
-for name in names:
-    fname = os.path.join(currentdir, f'{name}-scrapelog.txt')
-    try:
-        fhand = open(fname, 'a')
-    except FileNotFoundError:
-        fhand = open(fname, 'w')
     eventdb = os.path.join(currentdir, f'{name}.sqlite')
-    dbcon = sq.connect(eventdb)
-    dbcur = dbcon.cursor()
+    eventcon = sq.connect(eventdb)
+    eventcur = eventcon.cursor()
     url = f'https://secure.runescape.com/m=adventurers-log/rssfeed?searchName={name}'
     response = rq.get(url)
     data = ET.fromstring(response.text)
@@ -59,9 +53,10 @@ for name in names:
         except:
             fhand.write(f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC - nferr itemid\n')
             continue
-        if len(dbcur.execute('SELECT * FROM Events WHERE itemid = ?', (itemid,)).fetchall()) == 0:
-            dbcur.execute('INSERT INTO Events (itemid, title, description, link, date) VALUES (?, ?, ?, ?, ?)', (itemid, title, description, link, date,))
-            dbcon.commit()
+        if len(eventcur.execute('SELECT * FROM Events WHERE itemid = ?', (itemid,)).fetchall()) == 0:
+            eventcur.execute('INSERT INTO Events (itemid, title, description, link, date) VALUES (?, ?, ?, ?, ?)', (itemid, title, description, link, date,))
+            eventcon.commit()
+            eventcon.close()
         else:
             fhand.write(f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC - {itemid} dupcheck\n')
             continue
