@@ -9,24 +9,29 @@ for name in names:
         fhand = open(fname, 'a')
     except FileNotFoundError:
         fhand = open(fname, 'w')
-    url = 'https://apps.runescape.com/runemetrics/profile/profile?user=' + name + '&activities=20'
-    data = rq.get(url).json()
+    
+    
+    apiurl = 'https://apps.runescape.com/runemetrics/profile/profile?user=' + name + '&activities=20'
+    apidata = rq.get(apiurl).json()
     dbname = os.path.join(currentdir, f'{name}-API.sqlite')
     dbcon = sq.connect(dbname)
     dbcur = dbcon.cursor()
-    insertdata = (data['name'], data['rank'], data['melee'], data['combatlevel'], data['ranged'], data['totalxp'], data['questscomplete'], data['questsnotstarted'], data['questsstarted'], data['totalskill'], data['magic'], f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC', json.dumps(data['skillvalues']))
+    insertdata = (apidata['name'], apidata['rank'], apidata['melee'], apidata['combatlevel'], apidata['ranged'], apidata['totalxp'], apidata['questscomplete'], apidata['questsnotstarted'], apidata['questsstarted'], apidata['totalskill'], apidata['magic'], f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC', json.dumps(apidata['skillvalues']))
     insertcommand = 'INSERT INTO data (name, rank, melee, combatlevel, ranged, totalxp, questscomplete, questsnotstarted, questsstarted, totalskill, magic, polltime, skills) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
-    print(type(data['skillvalues']))
+    print(type(apidata['skillvalues']))
     dbcur.execute(insertcommand, insertdata)
     dbcon.commit()
     dbcon.close()
+
+
+
+    eventurl = f'https://secure.runescape.com/m=adventurers-log/rssfeed?searchName={name}'
+    response = rq.get(eventurl)
+    eventdata = ET.fromstring(response.text)
+    feed = eventdata[0].findall('item')
     eventdb = os.path.join(currentdir, f'{name}.sqlite')
     eventcon = sq.connect(eventdb)
     eventcur = eventcon.cursor()
-    url = f'https://secure.runescape.com/m=adventurers-log/rssfeed?searchName={name}'
-    response = rq.get(url)
-    data = ET.fromstring(response.text)
-    feed = data[0].findall('item')
     for item in feed:
         try:
             title = item.find('title').text
@@ -56,7 +61,6 @@ for name in names:
         if len(eventcur.execute('SELECT * FROM Events WHERE itemid = ?', (itemid,)).fetchall()) == 0:
             eventcur.execute('INSERT INTO Events (itemid, title, description, link, date) VALUES (?, ?, ?, ?, ?)', (itemid, title, description, link, date,))
             eventcon.commit()
-            eventcon.close()
         else:
             fhand.write(f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC - {itemid} dupcheck\n')
             continue
