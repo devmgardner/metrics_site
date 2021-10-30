@@ -262,7 +262,9 @@
             </div>
             <div class="resume-item pb-0">
               <h3>Archaeology</h3>
-              <h4>Level {{ skills.Archaeology }}</h4>
+              {% if skills.Archaeology > 99 %}
+                <h4 style="color:red">Level {{ skills.Archaeology }}</h4>
+              {% endif %}
               <h4>XP {{ xp.Archaeology }}</h4>
             </div>
 
