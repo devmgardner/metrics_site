@@ -4,7 +4,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 names = ['Ergo','Alinthar']
 for name in names:
-    fname = os.path.join(currentdir, f'{name}-scrapelog.txt')
+    fname = f'{currentdir}/{name}-scrapelog.txt'
     try:
         fhand = open(fname, 'a')
     except FileNotFoundError:
@@ -13,7 +13,7 @@ for name in names:
     
     apiurl = 'https://apps.runescape.com/runemetrics/profile/profile?user=' + name + '&activities=20'
     apidata = rq.get(apiurl).json()
-    dbname = os.path.join(currentdir, f'{name}-API.sqlite')
+    dbname = f'{currentdir}/{name}-API.sqlite'
     dbcon = sq.connect(dbname)
     dbcur = dbcon.cursor()
     insertdata = (apidata['name'], apidata['rank'], apidata['melee'], apidata['combatlevel'], apidata['ranged'], apidata['totalxp'], apidata['questscomplete'], apidata['questsnotstarted'], apidata['questsstarted'], apidata['totalskill'], apidata['magic'], f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC', json.dumps(apidata['skillvalues']))
@@ -29,7 +29,7 @@ for name in names:
     response = rq.get(eventurl)
     eventdata = ET.fromstring(response.text)
     feed = eventdata[0].findall('item')
-    eventdb = os.path.join(currentdir, f'{name}.sqlite')
+    eventdb = f'{currentdir}/{name}.sqlite'
     eventcon = sq.connect(eventdb)
     eventcur = eventcon.cursor()
     for item in feed:
