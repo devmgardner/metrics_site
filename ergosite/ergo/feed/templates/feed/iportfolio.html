@@ -157,14 +157,14 @@
             </div>
             <div class="resume-item pb-0">
               <h3>Strength</h3>
-              <{% if skills.Strength > 98 %}
-              {% if xp.Strength > 199999999 %}
-                <h4 style="color: royalblue;">Level {{ skills.Strength }}</h4>
-                <h4 style="color: royalblue;">XP {{ xp.Strength }}</h4>
-              {% else %}
-                <h4 style="color: lime;">Level {{ skills.Strength }}</h4>
-                <h4 style="color: lime;">XP {{ xp.Strength }}</h4>
-              {% endif %}
+              {% if skills.Strength > 98 %}
+                {% if xp.Strength > 199999999 %}
+                  <h4 style="color: royalblue;">Level {{ skills.Strength }}</h4>
+                  <h4 style="color: royalblue;">XP {{ xp.Strength }}</h4>
+                {% else %}
+                  <h4 style="color: lime;">Level {{ skills.Strength }}</h4>
+                  <h4 style="color: lime;">XP {{ xp.Strength }}</h4>
+                {% endif %}
             {% else %}
               <h4>Level {{ skills.Strength }}</h4>
               <h4>XP {{ xp.Strength }}</h4>
