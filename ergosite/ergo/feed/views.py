@@ -3,6 +3,8 @@ import json
 from django.shortcuts import render
 from requests import api
 from .utilities import apiscrape
+from .utilities import dbscrape
+
 
 ergoallskills = apiscrape('Ergo')[4]
 ergoleveldict = {}
@@ -183,10 +185,10 @@ for skill in alintharallskills:
 
 # Create your views here.
 def ergo(request) :
-    return render(request, 'feed/iportfolio.html', {'combatlevel':ergocombat, 'totalskill':ergototalskill, 'totalxp':ergototalxp, 'rank':ergorank, 'skills':ergoskilllevels, 'xp':ergoskillxp, 'questscomplete':ergoquestscomplete, 'questspercent':ergoquestspercent, 'name':'Ergo'})
+    return render(request, 'feed/iportfolio.html', {'combatlevel':ergocombat, 'totalskill':ergototalskill, 'totalxp':ergototalxp, 'rank':ergorank, 'skills':ergoskilllevels, 'xp':ergoskillxp, 'questscomplete':ergoquestscomplete, 'questspercent':ergoquestspercent, 'name':'Ergo', 'activities':ergoact})
 
 def alinthar(request) :
-    return render(request, 'feed/iportfolio.html', {'combatlevel':alintharcombat, 'totalskill':alinthartotalskill, 'totalxp':alinthartotalxp, 'rank':alintharrank, 'skills':alintharskilllevels, 'xp':alintharskillxp, 'questscomplete':alintharquestscomplete, 'questspercent':alintharquestspercent, 'name':'Alinthar'})
+    return render(request, 'feed/iportfolio.html', {'combatlevel':alintharcombat, 'totalskill':alinthartotalskill, 'totalxp':alinthartotalxp, 'rank':alintharrank, 'skills':alintharskilllevels, 'xp':alintharskillxp, 'questscomplete':alintharquestscomplete, 'questspercent':alintharquestspercent, 'name':'Alinthar', 'activities':alintharact})
 
 def ergocombat():
     return apiscrape('Ergo')[0]
@@ -207,6 +209,8 @@ def ergoskilllevels():
     return ergoleveldict
 def ergoskillxp():
     return ergoxpdict
+def ergoact():
+    return dbscrape('Ergo')
 
 def alintharcombat():
     return apiscrape('Alinthar')[0]
@@ -227,3 +231,5 @@ def alintharskilllevels():
     return alintharleveldict
 def alintharskillxp():
     return alintharxpdict
+def alintharact():
+    return dbscrape('Alinthar')

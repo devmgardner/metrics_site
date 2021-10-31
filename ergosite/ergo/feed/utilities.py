@@ -74,3 +74,14 @@ def quests(u):
     return data['quests']
     #with open(os.path.join(currentdir, f'{u}-quests.txt'), 'w') as fhand:
     #    json.dump(data, fhand, indent=2)
+
+def dbscrape(u):
+    currentdir = os.path.dirname(os.path.realpath(__file__))
+    parentdir = os.path.dirname(currentdir)
+    sys.path.append(parentdir)
+    dbdir = os.path.join(currentdir, 'dbs')
+    actdb = os.path.join(dbdir, f'{u}-API.sqlite')
+    actcon = sq.connect(actdb)
+    actcur = actcon.cursor()
+    data = actcur.execute('SELECT * FROM activities ORDER BY datetime DESC').fetchall()
+    return data

@@ -548,7 +548,14 @@
 
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title" style="color:#e1bb34;">stuff will end up going here</h3>
+            <h3 class="resume-title" style="color:#e1bb34;">Event Log</h3>
+            {% for i in activities %}
+              <div class="resume-item" style="color:#e1bb34;">
+                <h4 style="color: lightgray;">{{ i.0 }}</h4>
+                <h4>{{ i.2 }}</h4>
+                <h4>{{ i.1 }}</h4>
+              </div>
+            {% endfor %}
             <!-- <div class="resume-item"> -->
             <!--   <h4>Information Technology Support Engineer</h4> -->
             <!--   <h5>Sep 2021 - Present</h5> -->
