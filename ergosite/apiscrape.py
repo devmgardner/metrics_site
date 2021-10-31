@@ -1,4 +1,5 @@
 import os, sys, json, requests as rq, sqlite3 as sq, time, xml.etree.ElementTree as ET, re
+from datetime import datetime
 currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
@@ -19,6 +20,10 @@ for name in names:
     insertdata = (apidata['name'], apidata['rank'], apidata['melee'], apidata['combatlevel'], apidata['ranged'], apidata['totalxp'], apidata['questscomplete'], apidata['questsnotstarted'], apidata['questsstarted'], apidata['totalskill'], apidata['magic'], f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC', json.dumps(apidata['skillvalues'], apidata['activities']))
     insertcommand = 'INSERT INTO data (name, rank, melee, combatlevel, ranged, totalxp, questscomplete, questsnotstarted, questsstarted, totalskill, magic, polltime, skills, activities) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
     print(type(apidata['skillvalues']))
+    for i in apidata['activites']:
+        if len(dbcur.execute('SELECT * FROM activities WHERE date = ? AND details = ? AND text = ?', (i['date'], i['details'], i['text'],)).fetchall()) == 0:
+            dbcur.execute('INSERT INTO activities (date, details, text, datetime) VALUES (?, ?, ?, ?)', (i['date'], i['details'], i['text'], int(datetime.strptime(i["date"], "%d-%b-%Y %H:%M").timestamp())))
+            dbcon.commit()
     dbcur.execute(insertcommand, insertdata)
     dbcon.commit()
     dbcon.close()
