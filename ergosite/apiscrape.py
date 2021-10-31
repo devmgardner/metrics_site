@@ -5,6 +5,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 names = ['Ergo','Alinthar']
 for name in names:
+    print(name)
     fname = f'{currentdir}/{name}-scrapelog.txt'
     try:
         fhand = open(fname, 'a')
@@ -17,10 +18,10 @@ for name in names:
     dbname = f'{currentdir}/{name}-API.sqlite'
     dbcon = sq.connect(dbname)
     dbcur = dbcon.cursor()
-    insertdata = (apidata['name'], apidata['rank'], apidata['melee'], apidata['combatlevel'], apidata['ranged'], apidata['totalxp'], apidata['questscomplete'], apidata['questsnotstarted'], apidata['questsstarted'], apidata['totalskill'], apidata['magic'], f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC', json.dumps(apidata['skillvalues'], apidata['activities']))
+    insertdata = (apidata['name'], apidata['rank'], apidata['melee'], apidata['combatlevel'], apidata['ranged'], apidata['totalxp'], apidata['questscomplete'], apidata['questsnotstarted'], apidata['questsstarted'], apidata['totalskill'], apidata['magic'], f'{time.strftime("%m-%d-%Y %H:%M:%S",time.gmtime())} UTC', json.dumps(apidata['skillvalues']), json.dumps(apidata['activities']))
     insertcommand = 'INSERT INTO data (name, rank, melee, combatlevel, ranged, totalxp, questscomplete, questsnotstarted, questsstarted, totalskill, magic, polltime, skills, activities) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)'
     print(type(apidata['skillvalues']))
-    for i in apidata['activites']:
+    for i in apidata['activities']:
         if len(dbcur.execute('SELECT * FROM activities WHERE date = ? AND details = ? AND text = ?', (i['date'], i['details'], i['text'],)).fetchall()) == 0:
             dbcur.execute('INSERT INTO activities (date, details, text, datetime) VALUES (?, ?, ?, ?)', (i['date'], i['details'], i['text'], int(datetime.strptime(i["date"], "%d-%b-%Y %H:%M").timestamp())))
             dbcon.commit()
