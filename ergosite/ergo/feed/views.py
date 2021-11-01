@@ -300,6 +300,7 @@ def ergoskillxp():
     ergoleveldict = {}
     ergoxpdict = {}
     for skill in ergoallskills:
+        skill['xp'] /= 10
         if skill['id'] == 0:
             ergoleveldict['Attack'] = skill['level']
             ergoxpdict['Attack'] = skill['xp']
@@ -498,6 +499,7 @@ def alintharskillxp():
     alintharleveldict = {}
     alintharxpdict = {}
     for skill in alintharallskills:
+        skill['xp'] /= 10
         if skill['id'] == 0:
             alintharleveldict['Attack'] = skill['level']
             alintharxpdict['Attack'] = skill['xp']
