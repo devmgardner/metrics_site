@@ -13,3 +13,11 @@ https://stackoverflow.com/questions/38999015/execute-a-python-script-in-django-w
 
 
 https://stackoverflow.com/questions/54438473/how-to-execute-file-py-on-html-button-press-using-django
+
+
+MODAL FOR EVENT LOG
+MODAL FOR QUEST LOG
+SET UP SKILLS AS GRID
+
+https://www.w3schools.com/bootstrap/bootstrap_modal.asp
+https://www.w3schools.com/howto/howto_css_modals.asp
