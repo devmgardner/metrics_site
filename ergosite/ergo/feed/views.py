@@ -6,7 +6,7 @@ from .utilities import apiscrape
 from .utilities import dbscrape
 
 
-ergoallskills = apiscrape('Ergo')[4]
+ergoallskills = json.loads(apiscrape('Ergo')[4])
 ergoleveldict = {}
 ergoxpdict = {}
 for skill in ergoallskills:
@@ -94,7 +94,7 @@ for skill in ergoallskills:
     elif skill['id'] == 27:
         ergoleveldict['Archaeology'] = skill['level']
         ergoxpdict['Archaeology'] = skill['xp']
-alintharallskills = apiscrape('Alinthar')[4]
+alintharallskills = json.loads(apiscrape('Alinthar')[4])
 alintharleveldict = {}
 alintharxpdict = {}
 for skill in alintharallskills:
