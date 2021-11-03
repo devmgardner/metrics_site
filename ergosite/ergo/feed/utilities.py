@@ -77,6 +77,25 @@ def quests(u):
     sys.path.append(parentdir)
     url = 'https://apps.runescape.com/runemetrics/quests?user=' + u
     data = rq.get(url).json()
+    for i in data['quests']:
+        if i['status'] == 'STARTED':
+            i['status'] = 'Started'
+        elif i['status'] == 'COMPLETED':
+            i['status'] = 'Completed'
+        elif i['status'] == 'NOT_STARTED':
+            i['status'] = 'Not Started'
+        if i['difficulty'] == 0:
+            i['difficulty'] = 'Novice'
+        elif i['difficulty'] == 1:
+            i['difficulty'] = 'Intermediate'
+        elif i['difficulty'] == 2:
+            i['difficulty'] = 'Experienced'
+        elif i['difficulty'] == 3:
+            i['difficulty'] = 'Master'
+        elif i['difficulty'] == 4:
+            i['difficulty'] = 'Grandmaster'
+        elif i['difficulty'] == 5:
+            i['difficulty'] = 'Special'
     return data['quests']
     #with open(os.path.join(currentdir, f'{u}-quests.txt'), 'w') as fhand:
     #    json.dump(data, fhand, indent=2)
