@@ -184,10 +184,10 @@ from .utilities import apiscrape, dbscrape, quests
 
 # Create your views here.
 def ergo(request) :
-    return render(request, 'feed/iportfolio.html', {'combatlevel':ergocombat, 'totalskill':ergototalskill, 'totalxp':ergototalxp, 'rank':ergorank, 'skills':ergoskilllevels, 'xp':ergoskillxp, 'questscomplete':ergoquestscomplete, 'questspercent':ergoquestspercent, 'name':'Ergo', 'activities':ergoact, 'allquests':ergoquests, 'xpc':ergoskillxpc, 'xpp':ergoskillxpp})
+    return render(request, 'feed/iportfolio.html', {'combatlevel':ergocombat, 'totalskill':ergototalskill, 'totalxp':ergototalxp, 'rank':ergorank, 'skills':ergoskilllevels, 'xp':ergoskillxp, 'questscomplete':ergoquestscomplete, 'questspercent':ergoquestspercent, 'name':'Ergo', 'activities':ergoact, 'allquests':ergoquests, 'xpc':ergoskillxpc, 'xpp':ergoskillxpp, 'xpp1':ergoskillxpp1, 'xpp2':ergoskillxpp2})
 
 def alinthar(request) :
-    return render(request, 'feed/iportfolio.html', {'combatlevel':alintharcombat, 'totalskill':alinthartotalskill, 'totalxp':alinthartotalxp, 'rank':alintharrank, 'skills':alintharskilllevels, 'xp':alintharskillxp, 'questscomplete':alintharquestscomplete, 'questspercent':alintharquestspercent, 'name':'Alinthar', 'activities':alintharact, 'allquests':alintharquests, 'xpc':alintharskillxpc, 'xpp':alintharskillxpp})
+    return render(request, 'feed/iportfolio.html', {'combatlevel':alintharcombat, 'totalskill':alinthartotalskill, 'totalxp':alinthartotalxp, 'rank':alintharrank, 'skills':alintharskilllevels, 'xp':alintharskillxp, 'questscomplete':alintharquestscomplete, 'questspercent':alintharquestspercent, 'name':'Alinthar', 'activities':alintharact, 'allquests':alintharquests, 'xpc':alintharskillxpc, 'xpp':alintharskillxpp, 'xpp1':alintharskillxpp1, 'xpp2':alintharskillxpp2})
 
 def ergocombat():
     return apiscrape('Ergo')[0]
@@ -331,7 +331,7 @@ def ergoskillxpp():
     ergoallskills = json.loads(apiscrape('Ergo')[4])
     ergoxppdict = {}
     for skill in ergoallskills:
-        skill['xp'] /= 10
+        skill['xp'] *= 10
         if skill['id'] == 0:
             ergoxppdict['Attack'] = round(skill['xp']/13034431, 2)
         elif skill['id'] == 1:
@@ -385,10 +385,134 @@ def ergoskillxpp():
         elif skill['id'] == 25:
             ergoxppdict['Divination'] = round(skill['xp']/13034431, 2)
         elif skill['id'] == 26:
-            ergoxppdict['Invention'] = round(skill['xp']/13034431, 2)
+            ergoxppdict['Invention'] = round(skill['xp']/36073511, 2)
         elif skill['id'] == 27:
             ergoxppdict['Archaeology'] = round(skill['xp']/13034431, 2)
     return ergoxppdict
+def ergoskillxpp1():
+    ergoallskills = json.loads(apiscrape('Ergo')[4])
+    ergoxpp1dict = {}
+    for skill in ergoallskills:
+        skill['xp'] *= 10
+        if skill['id'] == 0:
+            ergoxpp1dict['Attack'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 1:
+            ergoxpp1dict['Defence'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 2:
+            ergoxpp1dict['Strength'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 3:
+            ergoxpp1dict['Constitution'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 4:
+            ergoxpp1dict['Ranged'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 5:
+            ergoxpp1dict['Prayer'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 6:
+            ergoxpp1dict['Magic'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 7:
+            ergoxpp1dict['Cooking'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 8:
+            ergoxpp1dict['Woodcutting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 9:
+            ergoxpp1dict['Fletching'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 10:
+            ergoxpp1dict['Fishing'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 11:
+            ergoxpp1dict['Firemaking'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 12:
+            ergoxpp1dict['Crafting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 13:
+            ergoxpp1dict['Smithing'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 14:
+            ergoxpp1dict['Mining'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 15:
+            ergoxpp1dict['Herblore'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 16:
+            ergoxpp1dict['Agility'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 17:
+            ergoxpp1dict['Thieving'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 18:
+            ergoxpp1dict['Slayer'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 19:
+            ergoxpp1dict['Farming'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 20:
+            ergoxpp1dict['Runecrafting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 21:
+            ergoxpp1dict['Hunter'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 22:
+            ergoxpp1dict['Construction'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 23:
+            ergoxpp1dict['Summoning'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 24:
+            ergoxpp1dict['Dungeoneering'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 25:
+            ergoxpp1dict['Divination'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 26:
+            ergoxpp1dict['Invention'] = round(skill['xp']/80618654, 2)
+        elif skill['id'] == 27:
+            ergoxpp1dict['Archaeology'] = round(skill['xp']/104273167, 2)
+    return ergoxpp1dict
+def ergoskillxpp2():
+    ergoallskills = json.loads(apiscrape('Ergo')[4])
+    ergoxpp2dict = {}
+    for skill in ergoallskills:
+        skill['xp'] *= 10
+        if skill['id'] == 0:
+            ergoxpp2dict['Attack'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 1:
+            ergoxpp2dict['Defence'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 2:
+            ergoxpp2dict['Strength'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 3:
+            ergoxpp2dict['Constitution'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 4:
+            ergoxpp2dict['Ranged'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 5:
+            ergoxpp2dict['Prayer'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 6:
+            ergoxpp2dict['Magic'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 7:
+            ergoxpp2dict['Cooking'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 8:
+            ergoxpp2dict['Woodcutting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 9:
+            ergoxpp2dict['Fletching'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 10:
+            ergoxpp2dict['Fishing'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 11:
+            ergoxpp2dict['Firemaking'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 12:
+            ergoxpp2dict['Crafting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 13:
+            ergoxpp2dict['Smithing'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 14:
+            ergoxpp2dict['Mining'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 15:
+            ergoxpp2dict['Herblore'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 16:
+            ergoxpp2dict['Agility'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 17:
+            ergoxpp2dict['Thieving'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 18:
+            ergoxpp2dict['Slayer'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 19:
+            ergoxpp2dict['Farming'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 20:
+            ergoxpp2dict['Runecrafting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 21:
+            ergoxpp2dict['Hunter'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 22:
+            ergoxpp2dict['Construction'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 23:
+            ergoxpp2dict['Summoning'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 24:
+            ergoxpp2dict['Dungeoneering'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 25:
+            ergoxpp2dict['Divination'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 26:
+            ergoxpp2dict['Invention'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 27:
+            ergoxpp2dict['Archaeology'] = round(skill['xp']/200000000, 2)
+    return ergoxpp2dict
 def ergoskillxpc():
     ergoallskills = json.loads(apiscrape('Ergo')[4])
     ergoxpcdict = {}
@@ -652,10 +776,134 @@ def alintharskillxpp():
         elif skill['id'] == 25:
             alintharxppdict['Divination'] = round(skill['xp']/13034431, 2)
         elif skill['id'] == 26:
-            alintharxppdict['Invention'] = round(skill['xp']/13034431, 2)
+            alintharxppdict['Invention'] = round(skill['xp']/36073511, 2)
         elif skill['id'] == 27:
             alintharxppdict['Archaeology'] = round(skill['xp']/13034431, 2)
     return alintharxppdict
+def alintharskillxpp1():
+    alintharallskills = json.loads(apiscrape('Alinthar')[4])
+    alintharxpp1dict = {}
+    for skill in alintharallskills:
+        skill['xp'] *= 10
+        if skill['id'] == 0:
+            alintharxpp1dict['Attack'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 1:
+            alintharxpp1dict['Defence'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 2:
+            alintharxpp1dict['Strength'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 3:
+            alintharxpp1dict['Constitution'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 4:
+            alintharxpp1dict['Ranged'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 5:
+            alintharxpp1dict['Prayer'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 6:
+            alintharxpp1dict['Magic'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 7:
+            alintharxpp1dict['Cooking'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 8:
+            alintharxpp1dict['Woodcutting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 9:
+            alintharxpp1dict['Fletching'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 10:
+            alintharxpp1dict['Fishing'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 11:
+            alintharxpp1dict['Firemaking'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 12:
+            alintharxpp1dict['Crafting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 13:
+            alintharxpp1dict['Smithing'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 14:
+            alintharxpp1dict['Mining'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 15:
+            alintharxpp1dict['Herblore'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 16:
+            alintharxpp1dict['Agility'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 17:
+            alintharxpp1dict['Thieving'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 18:
+            alintharxpp1dict['Slayer'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 19:
+            alintharxpp1dict['Farming'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 20:
+            alintharxpp1dict['Runecrafting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 21:
+            alintharxpp1dict['Hunter'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 22:
+            alintharxpp1dict['Construction'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 23:
+            alintharxpp1dict['Summoning'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 24:
+            alintharxpp1dict['Dungeoneering'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 25:
+            alintharxpp1dict['Divination'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 26:
+            alintharxpp1dict['Invention'] = round(skill['xp']/80618654, 2)
+        elif skill['id'] == 27:
+            alintharxpp1dict['Archaeology'] = round(skill['xp']/104273167, 2)
+    return alintharxpp1dict
+def alintharskillxpp2():
+    alintharallskills = json.loads(apiscrape('Alinthar')[4])
+    alintharxpp2dict = {}
+    for skill in alintharallskills:
+        skill['xp'] *= 10
+        if skill['id'] == 0:
+            alintharxpp2dict['Attack'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 1:
+            alintharxpp2dict['Defence'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 2:
+            alintharxpp2dict['Strength'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 3:
+            alintharxpp2dict['Constitution'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 4:
+            alintharxpp2dict['Ranged'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 5:
+            alintharxpp2dict['Prayer'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 6:
+            alintharxpp2dict['Magic'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 7:
+            alintharxpp2dict['Cooking'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 8:
+            alintharxpp2dict['Woodcutting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 9:
+            alintharxpp2dict['Fletching'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 10:
+            alintharxpp2dict['Fishing'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 11:
+            alintharxpp2dict['Firemaking'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 12:
+            alintharxpp2dict['Crafting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 13:
+            alintharxpp2dict['Smithing'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 14:
+            alintharxpp2dict['Mining'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 15:
+            alintharxpp2dict['Herblore'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 16:
+            alintharxpp2dict['Agility'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 17:
+            alintharxpp2dict['Thieving'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 18:
+            alintharxpp2dict['Slayer'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 19:
+            alintharxpp2dict['Farming'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 20:
+            alintharxpp2dict['Runecrafting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 21:
+            alintharxpp2dict['Hunter'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 22:
+            alintharxpp2dict['Construction'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 23:
+            alintharxpp2dict['Summoning'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 24:
+            alintharxpp2dict['Dungeoneering'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 25:
+            alintharxpp2dict['Divination'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 26:
+            alintharxpp2dict['Invention'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 27:
+            alintharxpp2dict['Archaeology'] = round(skill['xp']/200000000, 2)
+    return alintharxpp2dict
 def alintharskillxpc():
     alintharallskills = json.loads(apiscrape('Alinthar')[4])
     alintharxpcdict = {}
