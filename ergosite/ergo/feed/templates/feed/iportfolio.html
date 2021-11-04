@@ -53,7 +53,8 @@
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="#numbers" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Summary</span></a></li>
-          <li><a href="#quests" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Quests</span></a></li>
+          <li><a href="#quests" class="nav-link scrollto"><i class="bx bi-journal-richtext"></i> <span>Quests</span></a></li>
+          <li><a href="#events" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Events</span></a></li>
           <li><a href="#levels" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Levels</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -148,6 +149,57 @@
 
       </div>
     </section><!-- End Skills Section -->
+    
+    
+    <!-- ======= Skills Section ======= -->
+    <section id="events" class="skills section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Events</h2>
+          <br>
+          <h4 style="color: lightgrey;">{{ activities.0.0 }}</h4>
+          <h5>{{ activities.0.2 }}</h5>
+          <h5>{{ activities.0.1 }}</h5>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#eventModal">
+            Full Event Log
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventtitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="background: #02131a;">
+                  <h5 class="modal-title" id="eventtitle">Event Log</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body" style="background-color: #02131a;">
+                  {% for i in activities %}
+                    <div class="resume-item" style="color:#e1bb34;">
+                      <h4 style="color: lightgray;">{{ i.0 }}</h4>
+                      <h4>{{ i.2 }}</h4>
+                      <h4>{{ i.1 }}</h4>
+                    </div>
+                  {% endfor %}
+                </div>
+                <div class="modal-footer" style="background: #02131a;">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Skills Section -->
+
+
+
+
+
+
 
     <!-- ======= Resume Section ======= -->
     <section id="levels" class="resume section-bg">
@@ -172,6 +224,9 @@
               {% else %}
                 <h4>Level {{ skills.Attack }}</h4>
                 <h4>XP {{ xpc.Attack }}</h4>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: {{ xp.Attack }}/13034431" aria-valuenow="{{ xp.Attack }}" aria-valuemin="0" aria-valuemax="13034431"></div>
+                </div>
               {% endif %}
             </div>
             <div class="resume-item pb-0">
@@ -577,30 +632,12 @@
               {% else %}
                 <h4>Level {{ skills.Archaeology }}</h4>
                 <h4>XP {{ xpc.Archaeology }}</h4>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: {{ xpp.Archaeology }}%" aria-valuenow="{{ xp.Archaeology }}" aria-valuemin="0" aria-valuemax="13034431">{{ xpp.Archaeology }}% to level 99</div>
+                </div>
               {% endif %}
             </div>
 
-          </div>
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="resume-title" style="color:#e1bb34;">Event Log</h3>
-            {% for i in activities %}
-              <div class="resume-item" style="color:#e1bb34;">
-                <h4 style="color: lightgray;">{{ i.0 }}</h4>
-                <h4>{{ i.2 }}</h4>
-                <h4>{{ i.1 }}</h4>
-              </div>
-            {% endfor %}
-            <!-- <div class="resume-item"> -->
-            <!--   <h4>Information Technology Support Engineer</h4> -->
-            <!--   <h5>Sep 2021 - Present</h5> -->
-            <!--   <p><em>TechnologyAdvice, Nashville, TN </em></p> -->
-            <!--   <ul> -->
-            <!--     <li>idk yet</li> -->
-            <!--     <li>it's not listed on linkedin</li> -->
-            <!--     <li>i'll fill stuff in here whenever you tell me</li> -->
-            <!--     <li>what do you do at your job lol</li> -->
-            <!--   </ul> -->
-            <!-- </div> -->
           </div>
         </div>
 
