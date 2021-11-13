@@ -235,7 +235,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Attack }}%; background-color: maroon !important" aria-valuenow="{{ xp.Attack }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Attack > 98 and skills.Attack < 120 %}
+              {% elif skills.Attack > 98 and xp.Attack < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Attack }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Attack }}</h4>
                 <i class="showhideclass">{{ xpp1.Attack }}% to level 120</i>
@@ -246,7 +246,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Attack }}%; background-color: maroon !important" aria-valuenow="{{ xp.Attack }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Attack > 119 and xp.Attack < 200000000 %}
+              {% elif xp.Attack > 104273167 and xp.Attack < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Attack }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Attack }}</h4>
                 <i class="showhideclass">{{ xpp2.Attack }}% to 200m XP</i>
@@ -276,7 +276,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Defence }}%; background-color: maroon !important" aria-valuenow="{{ xp.Defence }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Defence > 98 and skills.Defence < 120 %}
+              {% elif skills.Defence > 98 and xp.Defence < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Defence }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Defence }}</h4>
                 <i class="showhideclass">{{ xpp1.Defence }}% to level 120</i>
@@ -287,7 +287,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Defence }}%; background-color: maroon !important" aria-valuenow="{{ xp.Defence }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Defence > 119 and xp.Defence < 200000000 %}
+              {% elif xp.Defence > 104273167 and xp.Defence < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Defence }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Defence }}</h4>
                 <i class="showhideclass">{{ xpp2.Defence }}% to 200m XP</i>
@@ -317,7 +317,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Strength }}%; background-color: maroon !important" aria-valuenow="{{ xp.Strength }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Strength > 98 and skills.Strength < 120 %}
+              {% elif skills.Strength > 98 and xp.Strength < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Strength }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Strength }}</h4>
                 <i class="showhideclass">{{ xpp1.Strength }}% to level 120</i>
@@ -328,7 +328,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Strength }}%; background-color: maroon !important" aria-valuenow="{{ xp.Strength }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Strength > 119 and xp.Strength < 200000000 %}
+              {% elif xp.Strength > 104273167 and xp.Strength < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Strength }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Strength }}</h4>
                 <i class="showhideclass">{{ xpp2.Strength }}% to 200m XP</i>
@@ -358,7 +358,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Constitution }}%; background-color: maroon !important" aria-valuenow="{{ xp.Constitution }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Constitution > 98 and skills.Constitution < 120 %}
+              {% elif skills.Constitution > 98 and xp.Constitution < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Constitution }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Constitution }}</h4>
                 <i class="showhideclass">{{ xpp1.Constitution }}% to level 120</i>
@@ -369,7 +369,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Constitution }}%; background-color: maroon !important" aria-valuenow="{{ xp.Constitution }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Constitution > 119 and xp.Constitution < 200000000 %}
+              {% elif xp.Constitution > 104273167 and xp.Constitution < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Constitution }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Constitution }}</h4>
                 <i class="showhideclass">{{ xpp2.Constitution }}% to 200m XP</i>
@@ -399,7 +399,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Ranged }}%; background-color: maroon !important" aria-valuenow="{{ xp.Ranged }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Ranged > 98 and skills.Ranged < 120 %}
+              {% elif skills.Ranged > 98 and xp.Ranged < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Ranged }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Ranged }}</h4>
                 <i class="showhideclass">{{ xpp1.Ranged }}% to level 120</i>
@@ -410,7 +410,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Ranged }}%; background-color: maroon !important" aria-valuenow="{{ xp.Ranged }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Ranged > 119 and xp.Ranged < 200000000 %}
+              {% elif xp.Ranged > 104273167 and xp.Ranged < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Ranged }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Ranged }}</h4>
                 <i class="showhideclass">{{ xpp2.Ranged }}% to 200m XP</i>
@@ -440,7 +440,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Prayer }}%; background-color: maroon !important" aria-valuenow="{{ xp.Prayer }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Prayer > 98 and skills.Prayer < 120 %}
+              {% elif skills.Prayer > 98 and xp.Prayer < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Prayer }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Prayer }}</h4>
                 <i class="showhideclass">{{ xpp1.Prayer }}% to level 120</i>
@@ -451,7 +451,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Prayer }}%; background-color: maroon !important" aria-valuenow="{{ xp.Prayer }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Prayer > 119 and xp.Prayer < 200000000 %}
+              {% elif xp.Prayer > 104273167 and xp.Prayer < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Prayer }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Prayer }}</h4>
                 <i class="showhideclass">{{ xpp2.Prayer }}% to 200m XP</i>
@@ -481,7 +481,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Magic }}%; background-color: maroon !important" aria-valuenow="{{ xp.Magic }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Magic > 98 and skills.Magic < 120 %}
+              {% elif skills.Magic > 98 and xp.Magic < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Magic }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Magic }}</h4>
                 <i class="showhideclass">{{ xpp1.Magic }}% to level 120</i>
@@ -492,7 +492,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Magic }}%; background-color: maroon !important" aria-valuenow="{{ xp.Magic }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Magic > 119 and xp.Magic < 200000000 %}
+              {% elif xp.Magic > 104273167 and xp.Magic < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Magic }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Magic }}</h4>
                 <i class="showhideclass">{{ xpp2.Magic }}% to 200m XP</i>
@@ -522,7 +522,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Cooking }}%; background-color: maroon !important" aria-valuenow="{{ xp.Cooking }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Cooking > 98 and skills.Cooking < 120 %}
+              {% elif skills.Cooking > 98 and xp.Cooking < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Cooking }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Cooking }}</h4>
                 <i class="showhideclass">{{ xpp1.Cooking }}% to level 120</i>
@@ -533,7 +533,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Cooking }}%; background-color: maroon !important" aria-valuenow="{{ xp.Cooking }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Cooking > 119 and xp.Cooking < 200000000 %}
+              {% elif xp.Cooking > 104273167 and xp.Cooking < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Cooking }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Cooking }}</h4>
                 <i class="showhideclass">{{ xpp2.Cooking }}% to 200m XP</i>
@@ -563,7 +563,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Woodcutting }}%; background-color: maroon !important" aria-valuenow="{{ xp.Woodcutting }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Woodcutting > 98 and skills.Woodcutting < 120 %}
+              {% elif skills.Woodcutting > 98 and xp.Woodcutting < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Woodcutting }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Woodcutting }}</h4>
                 <i class="showhideclass">{{ xpp1.Woodcutting }}% to level 120</i>
@@ -574,7 +574,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Woodcutting }}%; background-color: maroon !important" aria-valuenow="{{ xp.Woodcutting }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Woodcutting > 119 and xp.Woodcutting < 200000000 %}
+              {% elif xp.Woodcutting > 104273167 and xp.Woodcutting < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Woodcutting }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Woodcutting }}</h4>
                 <i class="showhideclass">{{ xpp2.Woodcutting }}% to 200m XP</i>
@@ -604,7 +604,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Fletching }}%; background-color: maroon !important" aria-valuenow="{{ xp.Fletching }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Fletching > 98 and skills.Fletching < 120 %}
+              {% elif skills.Fletching > 98 and xp.Fletching < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Fletching }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Fletching }}</h4>
                 <i class="showhideclass">{{ xpp1.Fletching }}% to level 120</i>
@@ -615,7 +615,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Fletching }}%; background-color: maroon !important" aria-valuenow="{{ xp.Fletching }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Fletching > 119 and xp.Fletching < 200000000 %}
+              {% elif xp.Fletching > 104273167 and xp.Fletching < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Fletching }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Fletching }}</h4>
                 <i class="showhideclass">{{ xpp2.Fletching }}% to 200m XP</i>
@@ -645,7 +645,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Fishing }}%; background-color: maroon !important" aria-valuenow="{{ xp.Fishing }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Fishing > 98 and skills.Fishing < 120 %}
+              {% elif skills.Fishing > 98 and xp.Fishing < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Fishing }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Fishing }}</h4>
                 <i class="showhideclass">{{ xpp1.Fishing }}% to level 120</i>
@@ -656,7 +656,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Fishing }}%; background-color: maroon !important" aria-valuenow="{{ xp.Fishing }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Fishing > 119 and xp.Fishing < 200000000 %}
+              {% elif xp.Fishing > 104273167 and xp.Fishing < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Fishing }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Fishing }}</h4>
                 <i class="showhideclass">{{ xpp2.Fishing }}% to 200m XP</i>
@@ -686,7 +686,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Firemaking }}%; background-color: maroon !important" aria-valuenow="{{ xp.Firemaking }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Firemaking > 98 and skills.Firemaking < 120 %}
+              {% elif skills.Firemaking > 98 and xp.Firemaking < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Firemaking }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Firemaking }}</h4>
                 <i class="showhideclass">{{ xpp1.Firemaking }}% to level 120</i>
@@ -697,7 +697,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Firemaking }}%; background-color: maroon !important" aria-valuenow="{{ xp.Firemaking }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Firemaking > 119 and xp.Firemaking < 200000000 %}
+              {% elif xp.Firemaking > 104273167 and xp.Firemaking < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Firemaking }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Firemaking }}</h4>
                 <i class="showhideclass">{{ xpp2.Firemaking }}% to 200m XP</i>
@@ -727,7 +727,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Crafting }}%; background-color: maroon !important" aria-valuenow="{{ xp.Crafting }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Crafting > 98 and skills.Crafting < 120 %}
+              {% elif skills.Crafting > 98 and xp.Crafting < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Crafting }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Crafting }}</h4>
                 <i class="showhideclass">{{ xpp1.Crafting }}% to level 120</i>
@@ -738,7 +738,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Crafting }}%; background-color: maroon !important" aria-valuenow="{{ xp.Crafting }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Crafting > 119 and xp.Crafting < 200000000 %}
+              {% elif xp.Crafting > 104273167 and xp.Crafting < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Crafting }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Crafting }}</h4>
                 <i class="showhideclass">{{ xpp2.Crafting }}% to 200m XP</i>
@@ -768,7 +768,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Smithing }}%; background-color: maroon !important" aria-valuenow="{{ xp.Smithing }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Smithing > 98 and skills.Smithing < 120 %}
+              {% elif skills.Smithing > 98 and xp.Smithing < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Smithing }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Smithing }}</h4>
                 <i class="showhideclass">{{ xpp1.Smithing }}% to level 120</i>
@@ -779,7 +779,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Smithing }}%; background-color: maroon !important" aria-valuenow="{{ xp.Smithing }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Smithing > 119 and xp.Smithing < 200000000 %}
+              {% elif xp.Smithing > 104273167 and xp.Smithing < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Smithing }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Smithing }}</h4>
                 <i class="showhideclass">{{ xpp2.Smithing }}% to 200m XP</i>
@@ -809,7 +809,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Mining }}%; background-color: maroon !important" aria-valuenow="{{ xp.Mining }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Mining > 98 and skills.Mining < 120 %}
+              {% elif skills.Mining > 98 and xp.Mining < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Mining }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Mining }}</h4>
                 <i class="showhideclass">{{ xpp1.Mining }}% to level 120</i>
@@ -820,7 +820,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Mining }}%; background-color: maroon !important" aria-valuenow="{{ xp.Mining }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Mining > 119 and xp.Mining < 200000000 %}
+              {% elif xp.Mining > 104273167 and xp.Mining < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Mining }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Mining }}</h4>
                 <i class="showhideclass">{{ xpp2.Mining }}% to 200m XP</i>
@@ -850,7 +850,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Herblore }}%; background-color: maroon !important" aria-valuenow="{{ xp.Herblore }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Herblore > 98 and skills.Herblore < 120 %}
+              {% elif skills.Herblore > 98 and xp.Herblore < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Herblore }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Herblore }}</h4>
                 <i class="showhideclass">{{ xpp1.Herblore }}% to level 120</i>
@@ -861,7 +861,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Herblore }}%; background-color: maroon !important" aria-valuenow="{{ xp.Herblore }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Herblore > 119 and xp.Herblore < 200000000 %}
+              {% elif xp.Herblore > 104273167 and xp.Herblore < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Herblore }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Herblore }}</h4>
                 <i class="showhideclass">{{ xpp2.Herblore }}% to 200m XP</i>
@@ -891,7 +891,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Agility }}%; background-color: maroon !important" aria-valuenow="{{ xp.Agility }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Agility > 98 and skills.Agility < 120 %}
+              {% elif skills.Agility > 98 and xp.Agility < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Agility }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Agility }}</h4>
                 <i class="showhideclass">{{ xpp1.Agility }}% to level 120</i>
@@ -902,7 +902,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Agility }}%; background-color: maroon !important" aria-valuenow="{{ xp.Agility }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Agility > 119 and xp.Agility < 200000000 %}
+              {% elif xp.Agility > 104273167 and xp.Agility < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Agility }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Agility }}</h4>
                 <i class="showhideclass">{{ xpp2.Agility }}% to 200m XP</i>
@@ -932,7 +932,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Thieving }}%; background-color: maroon !important" aria-valuenow="{{ xp.Thieving }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Thieving > 98 and skills.Thieving < 120 %}
+              {% elif skills.Thieving > 98 and xp.Thieving < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Thieving }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Thieving }}</h4>
                 <i class="showhideclass">{{ xpp1.Thieving }}% to level 120</i>
@@ -943,7 +943,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Thieving }}%; background-color: maroon !important" aria-valuenow="{{ xp.Thieving }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Thieving > 119 and xp.Thieving < 200000000 %}
+              {% elif xp.Thieving > 104273167 and xp.Thieving < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Thieving }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Thieving }}</h4>
                 <i class="showhideclass">{{ xpp2.Thieving }}% to 200m XP</i>
@@ -973,7 +973,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Slayer }}%; background-color: maroon !important" aria-valuenow="{{ xp.Slayer }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Slayer > 98 and skills.Slayer < 120 %}
+              {% elif skills.Slayer > 98 and xp.Slayer < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Slayer }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Slayer }}</h4>
                 <i class="showhideclass">{{ xpp1.Slayer }}% to level 120</i>
@@ -984,7 +984,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Slayer }}%; background-color: maroon !important" aria-valuenow="{{ xp.Slayer }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Slayer > 119 and xp.Slayer < 200000000 %}
+              {% elif xp.Slayer > 104273167 and xp.Slayer < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Slayer }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Slayer }}</h4>
                 <i class="showhideclass">{{ xpp2.Slayer }}% to 200m XP</i>
@@ -1014,7 +1014,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Farming }}%; background-color: maroon !important" aria-valuenow="{{ xp.Farming }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Farming > 98 and skills.Farming < 120 %}
+              {% elif skills.Farming > 98 and xp.Farming < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Farming }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Farming }}</h4>
                 <i class="showhideclass">{{ xpp1.Farming }}% to level 120</i>
@@ -1025,7 +1025,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Farming }}%; background-color: maroon !important" aria-valuenow="{{ xp.Farming }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Farming > 119 and xp.Farming < 200000000 %}
+              {% elif xp.Farming > 104273167 and xp.Farming < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Farming }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Farming }}</h4>
                 <i class="showhideclass">{{ xpp2.Farming }}% to 200m XP</i>
@@ -1055,7 +1055,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Runecrafting }}%; background-color: maroon !important" aria-valuenow="{{ xp.Runecrafting }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Runecrafting > 98 and skills.Runecrafting < 120 %}
+              {% elif skills.Runecrafting > 98 and xp.Runecrafting < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Runecrafting }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Runecrafting }}</h4>
                 <i class="showhideclass">{{ xpp1.Runecrafting }}% to level 120</i>
@@ -1066,7 +1066,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Runecrafting }}%; background-color: maroon !important" aria-valuenow="{{ xp.Runecrafting }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Runecrafting > 119 and xp.Runecrafting < 200000000 %}
+              {% elif xp.Runecrafting > 104273167 and xp.Runecrafting < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Runecrafting }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Runecrafting }}</h4>
                 <i class="showhideclass">{{ xpp2.Runecrafting }}% to 200m XP</i>
@@ -1096,7 +1096,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Hunter }}%; background-color: maroon !important" aria-valuenow="{{ xp.Hunter }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Hunter > 98 and skills.Hunter < 120 %}
+              {% elif skills.Hunter > 98 and xp.Hunter < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Hunter }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Hunter }}</h4>
                 <i class="showhideclass">{{ xpp1.Hunter }}% to level 120</i>
@@ -1107,7 +1107,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Hunter }}%; background-color: maroon !important" aria-valuenow="{{ xp.Hunter }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Hunter > 119 and xp.Hunter < 200000000 %}
+              {% elif xp.Hunter > 104273167 and xp.Hunter < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Hunter }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Hunter }}</h4>
                 <i class="showhideclass">{{ xpp2.Hunter }}% to 200m XP</i>
@@ -1137,7 +1137,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Construction }}%; background-color: maroon !important" aria-valuenow="{{ xp.Construction }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Construction > 98 and skills.Construction < 120 %}
+              {% elif skills.Construction > 98 and xp.Construction < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Construction }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Construction }}</h4>
                 <i class="showhideclass">{{ xpp1.Construction }}% to level 120</i>
@@ -1148,7 +1148,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Construction }}%; background-color: maroon !important" aria-valuenow="{{ xp.Construction }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Construction > 119 and xp.Construction < 200000000 %}
+              {% elif xp.Construction > 104273167 and xp.Construction < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Construction }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Construction }}</h4>
                 <i class="showhideclass">{{ xpp2.Construction }}% to 200m XP</i>
@@ -1178,7 +1178,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Summoning }}%; background-color: maroon !important" aria-valuenow="{{ xp.Summoning }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Summoning > 98 and skills.Summoning < 120 %}
+              {% elif skills.Summoning > 98 and xp.Summoning < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Summoning }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Summoning }}</h4>
                 <i class="showhideclass">{{ xpp1.Summoning }}% to level 120</i>
@@ -1189,7 +1189,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Summoning }}%; background-color: maroon !important" aria-valuenow="{{ xp.Summoning }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Summoning > 119 and xp.Summoning < 200000000 %}
+              {% elif xp.Summoning > 104273167 and xp.Summoning < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Summoning }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Summoning }}</h4>
                 <i class="showhideclass">{{ xpp2.Summoning }}% to 200m XP</i>
@@ -1219,7 +1219,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Dungeoneering }}%; background-color: maroon !important" aria-valuenow="{{ xp.Dungeoneering }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Dungeoneering > 98 and skills.Dungeoneering < 120 %}
+              {% elif skills.Dungeoneering > 98 and xp.Dungeoneering < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Dungeoneering }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Dungeoneering }}</h4>
                 <i class="showhideclass">{{ xpp1.Dungeoneering }}% to level 120</i>
@@ -1230,7 +1230,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Dungeoneering }}%; background-color: maroon !important" aria-valuenow="{{ xp.Dungeoneering }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Dungeoneering > 119 and xp.Dungeoneering < 200000000 %}
+              {% elif xp.Dungeoneering > 104273167 and xp.Dungeoneering < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Dungeoneering }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Dungeoneering }}</h4>
                 <i class="showhideclass">{{ xpp2.Dungeoneering }}% to 200m XP</i>
@@ -1260,7 +1260,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Divination }}%; background-color: maroon !important" aria-valuenow="{{ xp.Divination }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Divination > 98 and skills.Divination < 120 %}
+              {% elif skills.Divination > 98 and xp.Divination < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Divination }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Divination }}</h4>
                 <i class="showhideclass">{{ xpp1.Divination }}% to level 120</i>
@@ -1271,7 +1271,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Divination }}%; background-color: maroon !important" aria-valuenow="{{ xp.Divination }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Divination > 119 and xp.Divination < 200000000 %}
+              {% elif xp.Divination > 104273167 and xp.Divination < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Divination }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Divination }}</h4>
                 <i class="showhideclass">{{ xpp2.Divination }}% to 200m XP</i>
@@ -1301,7 +1301,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Invention }}%; background-color: maroon !important" aria-valuenow="{{ xp.Invention }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Invention > 98 and skills.Invention < 120 %}
+              {% elif skills.Invention > 98 and xp.Invention < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Invention }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Invention }}</h4>
                 <i class="showhideclass">{{ xpp1.Invention }}% to level 120</i>
@@ -1312,7 +1312,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Invention }}%; background-color: maroon !important" aria-valuenow="{{ xp.Invention }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Invention > 119 and xp.Invention < 200000000 %}
+              {% elif xp.Invention > 104273167 and xp.Invention < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Invention }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Invention }}</h4>
                 <i class="showhideclass">{{ xpp2.Invention }}% to 200m XP</i>
@@ -1342,7 +1342,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Archaeology }}%; background-color: maroon !important" aria-valuenow="{{ xp.Archaeology }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Archaeology > 99 and skills.Archaeology < 120 %}
+              {% elif skills.Archaeology > 99 and xp.Archaeology < 104273167 %}
                 <h4 style="color: lime;">Level {{ skills.Archaeology }}</h4>
                 <h4 style="color: lime;">XP {{ xpc.Archaeology }}</h4>
                 <i class="showhideclass">{{ xpp1.Archaeology }}% to level 120</i>
@@ -1353,7 +1353,7 @@
                 <div class="progress showhideclass">
                   <div class="progress-bar" role="progressbar" style="width: {{ xpp2.Archaeology }}%; background-color: maroon !important" aria-valuenow="{{ xp.Archaeology }}" aria-valuemin="0" aria-valuemax="200000000"></div>
                 </div>
-              {% elif skills.Archaeology > 120 and xp.Archaeology < 200000000 %}
+              {% elif xp.Archaeology > 104273167 and xp.Archaeology < 200000000 %}
                 <h4 style="color: royalblue;">Level {{ skills.Archaeology }}</h4>
                 <h4 style="color: royalblue;">XP {{ xpc.Archaeology }}</h4>
                 <i class="showhideclass">{{ xpp2.Archaeology }}% to 200m XP</i>
