@@ -5,6 +5,13 @@ sys.path.append(parentdir)
 #
 #
 import sqlite3 as sq
-ergodb = sq.connect(f'{currentdir}/ergo.sqlite')
+ergodb = sq.connect(f'{currentdir}/dasn1u.sqlite')
 ergocon = ergodb.cursor()
-ergocon.execute('CREATE TABLE Events (itemid INT PRIMARY KEY, title VARCHAR NOT NULL, description VARCHAR NOT NULL, link VARCHAR, date VARCHAR NOT NULL)')
+ergocon.execute('''CREATE TABLE "Events" (
+	"itemid"	INT,
+	"title"	VARCHAR NOT NULL,
+	"description"	VARCHAR NOT NULL,
+	"link"	VARCHAR,
+	"date"	VARCHAR NOT NULL,
+	PRIMARY KEY("itemid")
+);''')

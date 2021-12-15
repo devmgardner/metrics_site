@@ -3,7 +3,7 @@ from datetime import datetime
 currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
-names = ['Ergo','Alinthar']
+names = ['Ergo','Alinthar','dasn1u']
 for name in names:
     print(name)
     fname = f'{currentdir}/{name}-scrapelog.txt'

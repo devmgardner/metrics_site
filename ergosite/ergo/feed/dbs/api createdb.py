@@ -5,8 +5,14 @@ sys.path.append(parentdir)
 #
 #
 import sqlite3 as sq
-ergodb = sq.connect(f'{currentdir}\Ergo-API.sqlite')
+ergodb = sq.connect(f'{currentdir}/dasn1u-API.sqlite')
 ergocon = ergodb.cursor()
+ergocon.execute('''CREATE TABLE "activities" (
+	"date"	TEXT,
+	"details"	TEXT,
+	"text"	TEXT,
+	"datetime"	INTEGER
+);''')
 ergocon.execute('''CREATE TABLE "data" (
 	"name"	TEXT,
 	"rank"	INTEGER,
@@ -21,5 +27,7 @@ ergocon.execute('''CREATE TABLE "data" (
 	"magic"	INTEGER,
 	"polltime"	TEXT,
 	"skills"	json,
+	"activities"	json,
 	PRIMARY KEY("polltime")
-);''')
+);
+''')
