@@ -6,7 +6,7 @@ sys.path.append(parentdir)
 
 repo = git.Repo(f'{currentdir}/../../../../')  # if repo is CWD just do '.'
 
-repo.index.add(['ergosite/ergo/feed/dbs/apiscrape.py','ergosite/ergo/feed/dbs/cronjob.py'])
+repo.index.add([f'{currentdir}/.'])
 repo.index.commit('gitpython test')
 origin = repo.remote('origin')
 origin.push()
