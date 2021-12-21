@@ -3,10 +3,18 @@ currentdir = os.path.dirname(os.path.realpath(__file__))
 parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 #
-apiscrape.scrape()
-time.sleep()
-repo = git.Repo(f'{currentdir}/../../../../')  # if repo is CWD just do '.'
-repo.index.add([f'{currentdir}/.'])
-repo.index.commit('gitpython test')
-origin = repo.remote('origin')
-origin.push()
+def updaterepo():
+    repo = git.Repo(f'{currentdir}/../../../../')  # if repo is CWD just do '.'
+    repo.index.add([f'{currentdir}/.'])
+    repo.index.commit('AUTOMATED REMOTE DB UPDATES')
+    origin = repo.remote('origin')
+    origin.push()
+####
+def runcron():
+    apiscrape.scrape()
+    time.sleep(10)
+    updaterepo()
+    ####
+    time.sleep(900)
+for i in range(4):
+    runcron()
