@@ -4,190 +4,15 @@ from django.shortcuts import render
 from requests import api
 from .utilities import apiscrape, dbscrape, quests
 
-
-#ergoallskills = json.loads(apiscrape('Ergo')[4])
-#ergoleveldict = {}
-#ergoxpdict = {}
-#for skill in ergoallskills:
-#    if skill['id'] == 0:
-#        ergoleveldict['Attack'] = skill['level']
-#        ergoxpdict['Attack'] = skill['xp']
-#    elif skill['id'] == 1:
-#        ergoleveldict['Defence'] = skill['level']
-#        ergoxpdict['Defence'] = skill['xp']
-#    elif skill['id'] == 2:
-#        ergoleveldict['Strength'] = skill['level']
-#        ergoxpdict['Strength'] = skill['xp']
-#    elif skill['id'] == 3:
-#        ergoleveldict['Constitution'] = skill['level']
-#        ergoxpdict['Constitution'] = skill['xp']
-#    elif skill['id'] == 4:
-#        ergoleveldict['Ranged'] = skill['level']
-#        ergoxpdict['Ranged'] = skill['xp']
-#    elif skill['id'] == 5:
-#        ergoleveldict['Prayer'] = skill['level']
-#        ergoxpdict['Prayer'] = skill['xp']
-#    elif skill['id'] == 6:
-#        ergoleveldict['Magic'] = skill['level']
-#        ergoxpdict['Magic'] = skill['xp']
-#    elif skill['id'] == 7:
-#        ergoleveldict['Cooking'] = skill['level']
-#        ergoxpdict['Cooking'] = skill['xp']
-#    elif skill['id'] == 8:
-#        ergoleveldict['Woodcutting'] = skill['level']
-#        ergoxpdict['Woodcutting'] = skill['xp']
-#    elif skill['id'] == 9:
-#        ergoleveldict['Fletching'] = skill['level']
-#        ergoxpdict['Fletching'] = skill['xp']
-#    elif skill['id'] == 10:
-#        ergoleveldict['Fishing'] = skill['level']
-#        ergoxpdict['Fishing'] = skill['xp']
-#    elif skill['id'] == 11:
-#        ergoleveldict['Firemaking'] = skill['level']
-#        ergoxpdict['Firemaking'] = skill['xp']
-#    elif skill['id'] == 12:
-#        ergoleveldict['Crafting'] = skill['level']
-#        ergoxpdict['Crafting'] = skill['xp']
-#    elif skill['id'] == 13:
-#        ergoleveldict['Smithing'] = skill['level']
-#        ergoxpdict['Smithing'] = skill['xp']
-#    elif skill['id'] == 14:
-#        ergoleveldict['Mining'] = skill['level']
-#        ergoxpdict['Mining'] = skill['xp']
-#    elif skill['id'] == 15:
-#        ergoleveldict['Herblore'] = skill['level']
-#        ergoxpdict['Herblore'] = skill['xp']
-#    elif skill['id'] == 16:
-#        ergoleveldict['Agility'] = skill['level']
-#        ergoxpdict['Agility'] = skill['xp']
-#    elif skill['id'] == 17:
-#        ergoleveldict['Thieving'] = skill['level']
-#        ergoxpdict['Thieving'] = skill['xp']
-#    elif skill['id'] == 18:
-#        ergoleveldict['Slayer'] = skill['level']
-#        ergoxpdict['Slayer'] = skill['xp']
-#    elif skill['id'] == 19:
-#        ergoleveldict['Farming'] = skill['level']
-#        ergoxpdict['Farming'] = skill['xp']
-#    elif skill['id'] == 20:
-#        ergoleveldict['Runecrafting'] = skill['level']
-#        ergoxpdict['Runecrafting'] = skill['xp']
-#    elif skill['id'] == 21:
-#        ergoleveldict['Hunter'] = skill['level']
-#        ergoxpdict['Hunter'] = skill['xp']
-#    elif skill['id'] == 22:
-#        ergoleveldict['Construction'] = skill['level']
-#        ergoxpdict['Construction'] = skill['xp']
-#    elif skill['id'] == 23:
-#        ergoleveldict['Summoning'] = skill['level']
-#        ergoxpdict['Summoning'] = skill['xp']
-#    elif skill['id'] == 24:
-#        ergoleveldict['Dungeoneering'] = skill['level']
-#        ergoxpdict['Dungeoneering'] = skill['xp']
-#    elif skill['id'] == 25:
-#        ergoleveldict['Divination'] = skill['level']
-#        ergoxpdict['Divination'] = skill['xp']
-#    elif skill['id'] == 26:
-#        ergoleveldict['Invention'] = skill['level']
-#        ergoxpdict['Invention'] = skill['xp']
-#    elif skill['id'] == 27:
-#        ergoleveldict['Archaeology'] = skill['level']
-#        ergoxpdict['Archaeology'] = skill['xp']
-#alintharallskills = json.loads(apiscrape('Alinthar')[4])
-#alintharleveldict = {}
-#alintharxpdict = {}
-#for skill in alintharallskills:
-#    if skill['id'] == 0:
-#        alintharleveldict['Attack'] = skill['level']
-#        alintharxpdict['Attack'] = skill['xp']
-#    elif skill['id'] == 1:
-#        alintharleveldict['Defence'] = skill['level']
-#        alintharxpdict['Defence'] = skill['xp']
-#    elif skill['id'] == 2:
-#        alintharleveldict['Strength'] = skill['level']
-#        alintharxpdict['Strength'] = skill['xp']
-#    elif skill['id'] == 3:
-#        alintharleveldict['Constitution'] = skill['level']
-#        alintharxpdict['Constitution'] = skill['xp']
-#    elif skill['id'] == 4:
-#        alintharleveldict['Ranged'] = skill['level']
-#        alintharxpdict['Ranged'] = skill['xp']
-#    elif skill['id'] == 5:
-#        alintharleveldict['Prayer'] = skill['level']
-#        alintharxpdict['Prayer'] = skill['xp']
-#    elif skill['id'] == 6:
-#        alintharleveldict['Magic'] = skill['level']
-#        alintharxpdict['Magic'] = skill['xp']
-#    elif skill['id'] == 7:
-#        alintharleveldict['Cooking'] = skill['level']
-#        alintharxpdict['Cooking'] = skill['xp']
-#    elif skill['id'] == 8:
-#        alintharleveldict['Woodcutting'] = skill['level']
-#        alintharxpdict['Woodcutting'] = skill['xp']
-#    elif skill['id'] == 9:
-#        alintharleveldict['Fletching'] = skill['level']
-#        alintharxpdict['Fletching'] = skill['xp']
-#    elif skill['id'] == 10:
-#        alintharleveldict['Fishing'] = skill['level']
-#        alintharxpdict['Fishing'] = skill['xp']
-#    elif skill['id'] == 11:
-#        alintharleveldict['Firemaking'] = skill['level']
-#        alintharxpdict['Firemaking'] = skill['xp']
-#    elif skill['id'] == 12:
-#        alintharleveldict['Crafting'] = skill['level']
-#        alintharxpdict['Crafting'] = skill['xp']
-#    elif skill['id'] == 13:
-#        alintharleveldict['Smithing'] = skill['level']
-#        alintharxpdict['Smithing'] = skill['xp']
-#    elif skill['id'] == 14:
-#        alintharleveldict['Mining'] = skill['level']
-#        alintharxpdict['Mining'] = skill['xp']
-#    elif skill['id'] == 15:
-#        alintharleveldict['Herblore'] = skill['level']
-#        alintharxpdict['Herblore'] = skill['xp']
-#    elif skill['id'] == 16:
-#        alintharleveldict['Agility'] = skill['level']
-#        alintharxpdict['Agility'] = skill['xp']
-#    elif skill['id'] == 17:
-#        alintharleveldict['Thieving'] = skill['level']
-#        alintharxpdict['Thieving'] = skill['xp']
-#    elif skill['id'] == 18:
-#        alintharleveldict['Slayer'] = skill['level']
-#        alintharxpdict['Slayer'] = skill['xp']
-#    elif skill['id'] == 19:
-#        alintharleveldict['Farming'] = skill['level']
-#        alintharxpdict['Farming'] = skill['xp']
-#    elif skill['id'] == 20:
-#        alintharleveldict['Runecrafting'] = skill['level']
-#        alintharxpdict['Runecrafting'] = skill['xp']
-#    elif skill['id'] == 21:
-#        alintharleveldict['Hunter'] = skill['level']
-#        alintharxpdict['Hunter'] = skill['xp']
-#    elif skill['id'] == 22:
-#        alintharleveldict['Construction'] = skill['level']
-#        alintharxpdict['Construction'] = skill['xp']
-#    elif skill['id'] == 23:
-#        alintharleveldict['Summoning'] = skill['level']
-#        alintharxpdict['Summoning'] = skill['xp']
-#    elif skill['id'] == 24:
-#        alintharleveldict['Dungeoneering'] = skill['level']
-#        alintharxpdict['Dungeoneering'] = skill['xp']
-#    elif skill['id'] == 25:
-#        alintharleveldict['Divination'] = skill['level']
-#        alintharxpdict['Divination'] = skill['xp']
-#    elif skill['id'] == 26:
-#        alintharleveldict['Invention'] = skill['level']
-#        alintharxpdict['Invention'] = skill['xp']
-#    elif skill['id'] == 27:
-#        alintharleveldict['Archaeology'] = skill['level']
-#        alintharxpdict['Archaeology'] = skill['xp']
-
 # Create your views here.
 def ergo(request) :
     return render(request, 'feed/iportfolio.html', {'combatlevel':ergocombat, 'totalskill':ergototalskill, 'totalxp':ergototalxp, 'rank':ergorank, 'skills':ergoskilllevels, 'xp':ergoskillxp, 'questscomplete':ergoquestscomplete, 'questspercent':ergoquestspercent, 'name':'Ergo', 'activities':ergoact, 'allquests':ergoquests, 'xpc':ergoskillxpc, 'xpp':ergoskillxpp, 'xpp1':ergoskillxpp1, 'xpp2':ergoskillxpp2})
 
 def alinthar(request) :
     return render(request, 'feed/iportfolio.html', {'combatlevel':alintharcombat, 'totalskill':alinthartotalskill, 'totalxp':alinthartotalxp, 'rank':alintharrank, 'skills':alintharskilllevels, 'xp':alintharskillxp, 'questscomplete':alintharquestscomplete, 'questspercent':alintharquestspercent, 'name':'Alinthar', 'activities':alintharact, 'allquests':alintharquests, 'xpc':alintharskillxpc, 'xpp':alintharskillxpp, 'xpp1':alintharskillxpp1, 'xpp2':alintharskillxpp2})
+
+def dasn1u(request) :
+    return render(request, 'feed/iportfolio.html', {'combatlevel':dasn1ucombat, 'totalskill':dasn1utotalskill, 'totalxp':dasn1utotalxp, 'rank':dasn1urank, 'skills':dasn1uskilllevels, 'xp':dasn1uskillxp, 'questscomplete':dasn1uquestscomplete, 'questspercent':dasn1uquestspercent, 'name':'dasn1u', 'activities':dasn1uact, 'allquests':dasn1uquests, 'xpc':dasn1uskillxpc, 'xpp':dasn1uskillxpp, 'xpp1':dasn1uskillxpp1, 'xpp2':dasn1uskillxpp2})
 
 def ergocombat():
     return apiscrape('Ergo')[0]
@@ -970,3 +795,395 @@ def alintharact():
     return dbscrape('Alinthar')
 def alintharquests():
     return quests('Alinthar')
+
+
+def dasn1ucombat():
+    return apiscrape('dasn1u')[0]
+def dasn1utotalskill():
+    return apiscrape('dasn1u')[1]
+def dasn1utotalxp():
+    return apiscrape('dasn1u')[2]
+def dasn1urank():
+    return apiscrape('dasn1u')[3]
+def dasn1uskills():
+    return apiscrape('dasn1u')[4]
+def dasn1uquestspercent():
+    completedpercentage = round(apiscrape('dasn1u')[5] / 307 * 100, 2)
+    return completedpercentage
+def dasn1uquestscomplete():
+    return apiscrape('dasn1u')[5]
+def dasn1uskilllevels():
+    dasn1uallskills = json.loads(apiscrape('dasn1u')[4])
+    dasn1uleveldict = {}
+    for skill in dasn1uallskills:
+        if skill['id'] == 0:
+            dasn1uleveldict['Attack'] = skill['level']
+        elif skill['id'] == 1:
+            dasn1uleveldict['Defence'] = skill['level']
+        elif skill['id'] == 2:
+            dasn1uleveldict['Strength'] = skill['level']
+        elif skill['id'] == 3:
+            dasn1uleveldict['Constitution'] = skill['level']
+        elif skill['id'] == 4:
+            dasn1uleveldict['Ranged'] = skill['level']
+        elif skill['id'] == 5:
+            dasn1uleveldict['Prayer'] = skill['level']
+        elif skill['id'] == 6:
+            dasn1uleveldict['Magic'] = skill['level']
+        elif skill['id'] == 7:
+            dasn1uleveldict['Cooking'] = skill['level']
+        elif skill['id'] == 8:
+            dasn1uleveldict['Woodcutting'] = skill['level']
+        elif skill['id'] == 9:
+            dasn1uleveldict['Fletching'] = skill['level']
+        elif skill['id'] == 10:
+            dasn1uleveldict['Fishing'] = skill['level']
+        elif skill['id'] == 11:
+            dasn1uleveldict['Firemaking'] = skill['level']
+        elif skill['id'] == 12:
+            dasn1uleveldict['Crafting'] = skill['level']
+        elif skill['id'] == 13:
+            dasn1uleveldict['Smithing'] = skill['level']
+        elif skill['id'] == 14:
+            dasn1uleveldict['Mining'] = skill['level']
+        elif skill['id'] == 15:
+            dasn1uleveldict['Herblore'] = skill['level']
+        elif skill['id'] == 16:
+            dasn1uleveldict['Agility'] = skill['level']
+        elif skill['id'] == 17:
+            dasn1uleveldict['Thieving'] = skill['level']
+        elif skill['id'] == 18:
+            dasn1uleveldict['Slayer'] = skill['level']
+        elif skill['id'] == 19:
+            dasn1uleveldict['Farming'] = skill['level']
+        elif skill['id'] == 20:
+            dasn1uleveldict['Runecrafting'] = skill['level']
+        elif skill['id'] == 21:
+            dasn1uleveldict['Hunter'] = skill['level']
+        elif skill['id'] == 22:
+            dasn1uleveldict['Construction'] = skill['level']
+        elif skill['id'] == 23:
+            dasn1uleveldict['Summoning'] = skill['level']
+        elif skill['id'] == 24:
+            dasn1uleveldict['Dungeoneering'] = skill['level']
+        elif skill['id'] == 25:
+            dasn1uleveldict['Divination'] = skill['level']
+        elif skill['id'] == 26:
+            dasn1uleveldict['Invention'] = skill['level']
+        elif skill['id'] == 27:
+            dasn1uleveldict['Archaeology'] = skill['level']
+    return dasn1uleveldict
+def dasn1uskillxp():
+    dasn1uallskills = json.loads(apiscrape('dasn1u')[4])
+    dasn1uxpdict = {}
+    for skill in dasn1uallskills:
+        skill['xp'] /= 10
+        if skill['id'] == 0:
+            dasn1uxpdict['Attack'] = skill['xp']
+        elif skill['id'] == 1:
+            dasn1uxpdict['Defence'] = skill['xp']
+        elif skill['id'] == 2:
+            dasn1uxpdict['Strength'] = skill['xp']
+        elif skill['id'] == 3:
+            dasn1uxpdict['Constitution'] = skill['xp']
+        elif skill['id'] == 4:
+            dasn1uxpdict['Ranged'] = skill['xp']
+        elif skill['id'] == 5:
+            dasn1uxpdict['Prayer'] = skill['xp']
+        elif skill['id'] == 6:
+            dasn1uxpdict['Magic'] = skill['xp']
+        elif skill['id'] == 7:
+            dasn1uxpdict['Cooking'] = skill['xp']
+        elif skill['id'] == 8:
+            dasn1uxpdict['Woodcutting'] = skill['xp']
+        elif skill['id'] == 9:
+            dasn1uxpdict['Fletching'] = skill['xp']
+        elif skill['id'] == 10:
+            dasn1uxpdict['Fishing'] = skill['xp']
+        elif skill['id'] == 11:
+            dasn1uxpdict['Firemaking'] = skill['xp']
+        elif skill['id'] == 12:
+            dasn1uxpdict['Crafting'] = skill['xp']
+        elif skill['id'] == 13:
+            dasn1uxpdict['Smithing'] = skill['xp']
+        elif skill['id'] == 14:
+            dasn1uxpdict['Mining'] = skill['xp']
+        elif skill['id'] == 15:
+            dasn1uxpdict['Herblore'] = skill['xp']
+        elif skill['id'] == 16:
+            dasn1uxpdict['Agility'] = skill['xp']
+        elif skill['id'] == 17:
+            dasn1uxpdict['Thieving'] = skill['xp']
+        elif skill['id'] == 18:
+            dasn1uxpdict['Slayer'] = skill['xp']
+        elif skill['id'] == 19:
+            dasn1uxpdict['Farming'] = skill['xp']
+        elif skill['id'] == 20:
+            dasn1uxpdict['Runecrafting'] = skill['xp']
+        elif skill['id'] == 21:
+            dasn1uxpdict['Hunter'] = skill['xp']
+        elif skill['id'] == 22:
+            dasn1uxpdict['Construction'] = skill['xp']
+        elif skill['id'] == 23:
+            dasn1uxpdict['Summoning'] = skill['xp']
+        elif skill['id'] == 24:
+            dasn1uxpdict['Dungeoneering'] = skill['xp']
+        elif skill['id'] == 25:
+            dasn1uxpdict['Divination'] = skill['xp']
+        elif skill['id'] == 26:
+            dasn1uxpdict['Invention'] = skill['xp']
+        elif skill['id'] == 27:
+            dasn1uxpdict['Archaeology'] = skill['xp']
+    return dasn1uxpdict
+def dasn1uskillxpp():
+    dasn1uallskills = json.loads(apiscrape('dasn1u')[4])
+    dasn1uxppdict = {}
+    for skill in dasn1uallskills:
+        skill['xp'] *= 10
+        if skill['id'] == 0:
+            dasn1uxppdict['Attack'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 1:
+            dasn1uxppdict['Defence'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 2:
+            dasn1uxppdict['Strength'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 3:
+            dasn1uxppdict['Constitution'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 4:
+            dasn1uxppdict['Ranged'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 5:
+            dasn1uxppdict['Prayer'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 6:
+            dasn1uxppdict['Magic'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 7:
+            dasn1uxppdict['Cooking'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 8:
+            dasn1uxppdict['Woodcutting'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 9:
+            dasn1uxppdict['Fletching'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 10:
+            dasn1uxppdict['Fishing'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 11:
+            dasn1uxppdict['Firemaking'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 12:
+            dasn1uxppdict['Crafting'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 13:
+            dasn1uxppdict['Smithing'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 14:
+            dasn1uxppdict['Mining'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 15:
+            dasn1uxppdict['Herblore'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 16:
+            dasn1uxppdict['Agility'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 17:
+            dasn1uxppdict['Thieving'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 18:
+            dasn1uxppdict['Slayer'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 19:
+            dasn1uxppdict['Farming'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 20:
+            dasn1uxppdict['Runecrafting'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 21:
+            dasn1uxppdict['Hunter'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 22:
+            dasn1uxppdict['Construction'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 23:
+            dasn1uxppdict['Summoning'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 24:
+            dasn1uxppdict['Dungeoneering'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 25:
+            dasn1uxppdict['Divination'] = round(skill['xp']/13034431, 2)
+        elif skill['id'] == 26:
+            dasn1uxppdict['Invention'] = round(skill['xp']/36073511, 2)
+        elif skill['id'] == 27:
+            dasn1uxppdict['Archaeology'] = round(skill['xp']/13034431, 2)
+    return dasn1uxppdict
+def dasn1uskillxpp1():
+    dasn1uallskills = json.loads(apiscrape('dasn1u')[4])
+    dasn1uxpp1dict = {}
+    for skill in dasn1uallskills:
+        skill['xp'] *= 10
+        if skill['id'] == 0:
+            dasn1uxpp1dict['Attack'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 1:
+            dasn1uxpp1dict['Defence'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 2:
+            dasn1uxpp1dict['Strength'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 3:
+            dasn1uxpp1dict['Constitution'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 4:
+            dasn1uxpp1dict['Ranged'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 5:
+            dasn1uxpp1dict['Prayer'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 6:
+            dasn1uxpp1dict['Magic'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 7:
+            dasn1uxpp1dict['Cooking'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 8:
+            dasn1uxpp1dict['Woodcutting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 9:
+            dasn1uxpp1dict['Fletching'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 10:
+            dasn1uxpp1dict['Fishing'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 11:
+            dasn1uxpp1dict['Firemaking'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 12:
+            dasn1uxpp1dict['Crafting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 13:
+            dasn1uxpp1dict['Smithing'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 14:
+            dasn1uxpp1dict['Mining'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 15:
+            dasn1uxpp1dict['Herblore'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 16:
+            dasn1uxpp1dict['Agility'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 17:
+            dasn1uxpp1dict['Thieving'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 18:
+            dasn1uxpp1dict['Slayer'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 19:
+            dasn1uxpp1dict['Farming'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 20:
+            dasn1uxpp1dict['Runecrafting'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 21:
+            dasn1uxpp1dict['Hunter'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 22:
+            dasn1uxpp1dict['Construction'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 23:
+            dasn1uxpp1dict['Summoning'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 24:
+            dasn1uxpp1dict['Dungeoneering'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 25:
+            dasn1uxpp1dict['Divination'] = round(skill['xp']/104273167, 2)
+        elif skill['id'] == 26:
+            dasn1uxpp1dict['Invention'] = round(skill['xp']/80618654, 2)
+        elif skill['id'] == 27:
+            dasn1uxpp1dict['Archaeology'] = round(skill['xp']/104273167, 2)
+    return dasn1uxpp1dict
+def dasn1uskillxpp2():
+    dasn1uallskills = json.loads(apiscrape('dasn1u')[4])
+    dasn1uxpp2dict = {}
+    for skill in dasn1uallskills:
+        skill['xp'] *= 10
+        if skill['id'] == 0:
+            dasn1uxpp2dict['Attack'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 1:
+            dasn1uxpp2dict['Defence'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 2:
+            dasn1uxpp2dict['Strength'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 3:
+            dasn1uxpp2dict['Constitution'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 4:
+            dasn1uxpp2dict['Ranged'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 5:
+            dasn1uxpp2dict['Prayer'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 6:
+            dasn1uxpp2dict['Magic'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 7:
+            dasn1uxpp2dict['Cooking'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 8:
+            dasn1uxpp2dict['Woodcutting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 9:
+            dasn1uxpp2dict['Fletching'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 10:
+            dasn1uxpp2dict['Fishing'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 11:
+            dasn1uxpp2dict['Firemaking'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 12:
+            dasn1uxpp2dict['Crafting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 13:
+            dasn1uxpp2dict['Smithing'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 14:
+            dasn1uxpp2dict['Mining'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 15:
+            dasn1uxpp2dict['Herblore'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 16:
+            dasn1uxpp2dict['Agility'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 17:
+            dasn1uxpp2dict['Thieving'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 18:
+            dasn1uxpp2dict['Slayer'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 19:
+            dasn1uxpp2dict['Farming'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 20:
+            dasn1uxpp2dict['Runecrafting'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 21:
+            dasn1uxpp2dict['Hunter'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 22:
+            dasn1uxpp2dict['Construction'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 23:
+            dasn1uxpp2dict['Summoning'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 24:
+            dasn1uxpp2dict['Dungeoneering'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 25:
+            dasn1uxpp2dict['Divination'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 26:
+            dasn1uxpp2dict['Invention'] = round(skill['xp']/200000000, 2)
+        elif skill['id'] == 27:
+            dasn1uxpp2dict['Archaeology'] = round(skill['xp']/200000000, 2)
+    return dasn1uxpp2dict
+def dasn1uskillxpc():
+    dasn1uallskills = json.loads(apiscrape('dasn1u')[4])
+    dasn1uxpcdict = {}
+    for skill in dasn1uallskills:
+        skill['xp'] = "{:,}".format(skill['xp']/10)
+        if skill['id'] == 0:
+            dasn1uxpcdict['Attack'] = skill['xp']
+        elif skill['id'] == 1:
+            dasn1uxpcdict['Defence'] = skill['xp']
+        elif skill['id'] == 2:
+            dasn1uxpcdict['Strength'] = skill['xp']
+        elif skill['id'] == 3:
+            dasn1uxpcdict['Constitution'] = skill['xp']
+        elif skill['id'] == 4:
+            dasn1uxpcdict['Ranged'] = skill['xp']
+        elif skill['id'] == 5:
+            dasn1uxpcdict['Prayer'] = skill['xp']
+        elif skill['id'] == 6:
+            dasn1uxpcdict['Magic'] = skill['xp']
+        elif skill['id'] == 7:
+            dasn1uxpcdict['Cooking'] = skill['xp']
+        elif skill['id'] == 8:
+            dasn1uxpcdict['Woodcutting'] = skill['xp']
+        elif skill['id'] == 9:
+            dasn1uxpcdict['Fletching'] = skill['xp']
+        elif skill['id'] == 10:
+            dasn1uxpcdict['Fishing'] = skill['xp']
+        elif skill['id'] == 11:
+            dasn1uxpcdict['Firemaking'] = skill['xp']
+        elif skill['id'] == 12:
+            dasn1uxpcdict['Crafting'] = skill['xp']
+        elif skill['id'] == 13:
+            dasn1uxpcdict['Smithing'] = skill['xp']
+        elif skill['id'] == 14:
+            dasn1uxpcdict['Mining'] = skill['xp']
+        elif skill['id'] == 15:
+            dasn1uxpcdict['Herblore'] = skill['xp']
+        elif skill['id'] == 16:
+            dasn1uxpcdict['Agility'] = skill['xp']
+        elif skill['id'] == 17:
+            dasn1uxpcdict['Thieving'] = skill['xp']
+        elif skill['id'] == 18:
+            dasn1uxpcdict['Slayer'] = skill['xp']
+        elif skill['id'] == 19:
+            dasn1uxpcdict['Farming'] = skill['xp']
+        elif skill['id'] == 20:
+            dasn1uxpcdict['Runecrafting'] = skill['xp']
+        elif skill['id'] == 21:
+            dasn1uxpcdict['Hunter'] = skill['xp']
+        elif skill['id'] == 22:
+            dasn1uxpcdict['Construction'] = skill['xp']
+        elif skill['id'] == 23:
+            dasn1uxpcdict['Summoning'] = skill['xp']
+        elif skill['id'] == 24:
+            dasn1uxpcdict['Dungeoneering'] = skill['xp']
+        elif skill['id'] == 25:
+            dasn1uxpcdict['Divination'] = skill['xp']
+        elif skill['id'] == 26:
+            dasn1uxpcdict['Invention'] = skill['xp']
+        elif skill['id'] == 27:
+            dasn1uxpcdict['Archaeology'] = skill['xp']
+    return dasn1uxpcdict
+def dasn1uact():
+    return dbscrape('dasn1u')
+def dasn1uquests():
+    return quests('dasn1u')
