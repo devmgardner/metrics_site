@@ -6,7 +6,7 @@ sys.path.append(parentdir)
 def updaterepo():
     repo = git.Repo(f'{currentdir}/../../../../')  # if repo is CWD just do '.'
     repo.index.add([f'{currentdir}/.'])
-    repo.index.commit('AUTOMATED REMOTE DB UPDATES')
+    repo.index.commit('AUTOMATED REMOTE UPDATES')
     origin = repo.remote('origin')
     origin.push()
 ####
