@@ -15,6 +15,4 @@ def runcron():
     time.sleep(10)
     updaterepo()
     ####
-    time.sleep(900)
-for i in range(4):
-    runcron()
+runcron()
