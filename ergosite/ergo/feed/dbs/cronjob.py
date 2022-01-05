@@ -13,6 +13,7 @@ def updaterepo():
 def runcron():
     apiscrape.scrape()
     time.sleep(10)
-    updaterepo()
+    #Commented out until .gitignore issue is fixed
+    #updaterepo()
     ####
 runcron()
