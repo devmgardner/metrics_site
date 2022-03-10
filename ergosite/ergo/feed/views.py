@@ -25,7 +25,7 @@ def ergorank():
 def ergoskills():
     return apiscrape('Ergo')[4]
 def ergoquestspercent():
-    completedpercentage = round(apiscrape('Ergo')[5] / 307 * 100, 2)
+    completedpercentage = round(apiscrape('Ergo')[5] / 310 * 100, 2)
     return completedpercentage
 def ergoquestscomplete():
     return apiscrape('Ergo')[5]
@@ -416,7 +416,7 @@ def alintharrank():
 def alintharskills():
     return apiscrape('Alinthar')[4]
 def alintharquestspercent():
-    completedpercentage = round(apiscrape('Alinthar')[5] / 307 * 100, 2)
+    completedpercentage = round(apiscrape('Alinthar')[5] / 310 * 100, 2)
     return completedpercentage
 def alintharquestscomplete():
     return apiscrape('Alinthar')[5]
@@ -808,7 +808,7 @@ def dasn1urank():
 def dasn1uskills():
     return apiscrape('dasn1u')[4]
 def dasn1uquestspercent():
-    completedpercentage = round(apiscrape('dasn1u')[5] / 307 * 100, 2)
+    completedpercentage = round(apiscrape('dasn1u')[5] / 310 * 100, 2)
     return completedpercentage
 def dasn1uquestscomplete():
     return apiscrape('dasn1u')[5]
