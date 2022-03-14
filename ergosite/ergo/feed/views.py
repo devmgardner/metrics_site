@@ -2,7 +2,7 @@ import sqlite3 as sq
 import json
 from django.shortcuts import render
 import requests as rq
-from .utilities import apiscrape, dbscrape, quests
+from .utilities import apiscrape, dbscrape, quests, avgscrape
 
 # Create your views here.
 #def ergo(request) :
@@ -408,15 +408,7 @@ def act(player):
 def charquests(player):
     return quests(player)
 def xpaverages(player):
-    averagelist = []
-    url = 'https://apps.runescape.com/runemetrics/xp-monthly?searchName={x}&skillid={y}'
-    for i in range(28):
-        data = rq.get(url.format(x=player, y=str(i)))
-        averagexpgain = data.json()['monthlyXpGain'][0]['averageXpGain']
-        totalgain = data.json()['monthlyXpGain'][0]['totalGain']
-        lastmonthgain = data.json()['monthlyXpGain'][0]['monthData'][11]['xpGain']
-        averagelist.append((f'{averagexpgain:,}',f'{totalgain:,}',f'{lastmonthgain:,}'))
-    return averagelist
+    return avgscrape(player)
 
 
 

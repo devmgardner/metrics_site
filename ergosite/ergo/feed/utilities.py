@@ -110,3 +110,17 @@ def dbscrape(u):
     actcur = actcon.cursor()
     data = actcur.execute('SELECT * FROM activities ORDER BY datetime DESC').fetchall()
     return data
+
+def avgscrape(u):
+    currentdir = os.path.dirname(os.path.realpath(__file__))
+    parentdir = os.path.dirname(currentdir)
+    sys.path.append(parentdir)
+    dbdir = os.path.join(currentdir, 'dbs')
+    avgdb = os.path.join(dbdir, f'{u}-averages.sqlite')
+    avgcon = sq.connect(avgdb)
+    avgcur = avgcon.cursor()
+    data = []
+    for i in range(28):
+        result = avgcur.execute('SELECT * FROM Averages WHERE skillid = ? ORDER BY id DESC', (i)).fetchone()
+        data.append((result[0],result[1],result[2],result[3]))
+    return data
