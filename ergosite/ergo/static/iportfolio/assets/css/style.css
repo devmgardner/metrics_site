@@ -451,6 +451,12 @@ section {
   border: 2px solid #e1bb34;
 }
 
+.hidden {
+  display: none;
+}
+
+
+
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
@@ -951,8 +957,4 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
-}
-
-.hidden {
-  display: none;
 }
