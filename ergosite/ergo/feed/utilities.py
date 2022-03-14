@@ -121,6 +121,6 @@ def avgscrape(u):
     avgcur = avgcon.cursor()
     data = []
     for i in range(28):
-        result = avgcur.execute('SELECT * FROM Averages WHERE skillid = ? ORDER BY id DESC', (i)).fetchone()
+        result = avgcur.execute('SELECT * FROM Averages WHERE skillid = ? ORDER BY id DESC', (i,)).fetchone()
         data.append((result[0],result[1],result[2],result[3]))
     return data
