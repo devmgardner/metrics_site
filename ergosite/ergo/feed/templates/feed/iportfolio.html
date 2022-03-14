@@ -8,7 +8,7 @@
     var x = document.getElementsByClassName("showhideclass");
     var i;
     for (i = 0; i < x.length; i ++) {
-      elstyle = window.getComputedStyle(x[i]);
+      const elstyle = window.getComputedStyle(x[i]);
       if (x[i].style.display === "none") {
         x[i].style.display = elstyle;
         //x[i].style.display = "block";
