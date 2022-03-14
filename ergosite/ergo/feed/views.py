@@ -1,7 +1,7 @@
 import sqlite3 as sq
 import json
 from django.shortcuts import render
-from requests import api
+import requests as rq
 from .utilities import apiscrape, dbscrape, quests
 
 # Create your views here.
@@ -15,7 +15,7 @@ from .utilities import apiscrape, dbscrape, quests
 #    return render(request, 'feed/iportfolio.html', {'combatlevel':dasn1ucombat, 'totalskill':dasn1utotalskill, 'totalxp':dasn1utotalxp, 'rank':dasn1urank, 'skills':dasn1uskilllevels, 'xp':dasn1uskillxp, 'questscomplete':dasn1uquestscomplete, 'questspercent':dasn1uquestspercent, 'name':'dasn1u', 'activities':dasn1uact, 'allquests':dasn1uquests, 'xpc':dasn1uskillxpc, 'xpp':dasn1uskillxpp, 'xpp1':dasn1uskillxpp1, 'xpp2':dasn1uskillxpp2})
 
 def charname(request, player):
-    return render(request, 'feed/iportfolio.html', {'combatlevel':combat(player), 'totalskill':totalskill(player), 'totalxp':totalxp(player), 'rank':rank(player), 'skills':skilllevels(player), 'xp':skillxp(player), 'questscomplete':questscomplete(player), 'questspercent':questspercent(player), 'name':player, 'activities':act(player), 'allquests':charquests(player), 'xpc':skillxpc(player), 'xpp':skillxpp(player), 'xpp1':skillxpp1(player), 'xpp2':skillxpp2(player)})
+    return render(request, 'feed/iportfolio.html', {'combatlevel':combat(player), 'totalskill':totalskill(player), 'totalxp':totalxp(player), 'rank':rank(player), 'skills':skilllevels(player), 'xp':skillxp(player), 'questscomplete':questscomplete(player), 'questspercent':questspercent(player), 'name':player, 'activities':act(player), 'allquests':charquests(player), 'xpc':skillxpc(player), 'xpp':skillxpp(player), 'xpp1':skillxpp1(player), 'xpp2':skillxpp2(player), 'averages':xpaverages(player)})
 
 def combat(player):
     return apiscrape(player)[0]
@@ -407,6 +407,18 @@ def act(player):
     return dbscrape(player)
 def charquests(player):
     return quests(player)
+def xpaverages(player):
+    averagelist = []
+    url = 'https://apps.runescape.com/runemetrics/xp-monthly?searchName={x}&skillid={y}'
+    for i in range(28):
+        data = rq.get(url.format(x=player, y=str(i)))
+        averagexpgain = data.json()['monthlyXpGain'][0]['averageXpGain']
+        totalgain = data.json()['monthlyXpGain'][0]['totalGain']
+        lastmonthgain = data.json()['monthlyXpGain'][0]['monthData'][11]['xpGain']
+        averagelist.append((f'{averagexpgain:,}',f'{totalgain:,}',f'{lastmonthgain:,}'))
+    return averagelist
+
+
 
 #def ergocombat():
 #    return apiscrape('Ergo')[0]
