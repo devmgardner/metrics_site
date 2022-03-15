@@ -10,8 +10,8 @@ urlpatterns = [
     path('alinthar', views.charname, {'player':'Alinthar'}, name='alinthar'),
     path('Alinthar/', views.charname, {'player':'Alinthar'}, name='alinthar'),
     path('Alinthar', views.charname, {'player':'Alinthar'}, name='alinthar'),
-    path('dasn1u/', views.charname, {'player':'dasn1u'}, name='dasn1u'),
-    path('dasn1u', views.charname, {'player':'dasn1u'}, name='dasn1u'),
-    path('Dasn1u/', views.charname, {'player':'dasn1u'}, name='dasn1u'),
-    path('Dasn1u', views.charname, {'player':'dasn1u'}, name='dasn1u'),
+    path('naevyse/', views.charname, {'player':'Naevyse'}, name='naevyse'),
+    path('naevyse', views.charname, {'player':'Naevyse'}, name='naevyse'),
+    path('Naevyse/', views.charname, {'player':'Naevyse'}, name='naevyse'),
+    path('Naevyse', views.charname, {'player':'Naevyse'}, name='naevyse'),
 ]
