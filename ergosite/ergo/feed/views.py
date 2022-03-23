@@ -15,7 +15,7 @@ from .utilities import apiscrape, dbscrape, quests, avgscrape
 #    return render(request, 'feed/iportfolio.html', {'combatlevel':dasn1ucombat, 'totalskill':dasn1utotalskill, 'totalxp':dasn1utotalxp, 'rank':dasn1urank, 'skills':dasn1uskilllevels, 'xp':dasn1uskillxp, 'questscomplete':dasn1uquestscomplete, 'questspercent':dasn1uquestspercent, 'name':'dasn1u', 'activities':dasn1uact, 'allquests':dasn1uquests, 'xpc':dasn1uskillxpc, 'xpp':dasn1uskillxpp, 'xpp1':dasn1uskillxpp1, 'xpp2':dasn1uskillxpp2})
 
 def charname(request, player):
-    return render(request, 'feed/iportfolio.html', {'combatlevel':combat(player), 'totalskill':totalskill(player), 'totalxp':totalxp(player), 'rank':rank(player), 'skills':skilllevels(player), 'xp':skillxp(player), 'questscomplete':questscomplete(player), 'questspercent':questspercent(player), 'name':player, 'activities':act(player), 'allquests':charquests(player), 'xpc':skillxpc(player), 'xpp':skillxpp(player), 'xpp1':skillxpp1(player), 'xpp2':skillxpp2(player), 'averages':xpaverages(player)})
+    return render(request, 'feed/iportfolio.html', {'combatlevel':combat(player), 'totalskill':totalskill(player), 'totalxp':totalxp(player), 'rank':rank(player), 'skills':skilllevels(player), 'xp':skillxp(player), 'questscomplete':questscomplete(player), 'questspercent':questspercent(player), 'name':player, 'activities':act(player), 'allquests':charquests(player), 'xpc':skillxpc(player), 'xpp':skillxpp(player), 'xpp1':skillxpp1(player), 'xpp2':skillxpp2(player), 'averages':xpaverages(player), 'levelstilmax':maxlevel(player)})
 
 def combat(player):
     return apiscrape(player)[0]
@@ -409,6 +409,12 @@ def charquests(player):
     return quests(player)
 def xpaverages(player):
     return avgscrape(player)
+def maxcape(player):
+    allskills = json.loads(apiscrape(player)[4])
+    maxlevel = 0
+    for skill in allskills:
+        maxlevel += (99 - skill['level'])
+    return maxlevel
 
 
 
