@@ -413,7 +413,8 @@ def maxcape(player):
     allskills = json.loads(apiscrape(player)[4])
     maxlevel = 0
     for skill in allskills:
-        maxlevel += (99 - skill['level'])
+        if skill['level'] < 99:
+            maxlevel += (99 - skill['level'])
     return maxlevel
 
 
