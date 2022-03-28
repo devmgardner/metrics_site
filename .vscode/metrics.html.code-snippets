@@ -1,0 +1,25 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"progress section": {
+		"scope": "html",
+		"prefix": "progressdiv",
+		"body": [
+			"<div class=\"resume-item pb-0\">\r\n  <h3>$1<\/h3>\r\n  {% if skills.$1 < 99 %}\r\n    <h4>Level {{ skills.$1 }}<\/h4>\r\n    <h4>XP {{ xpc.$1 }}<\/h4>\r\n    <i>{{ xpp.$1 }}% to level 99<\/i>\r\n    <div class=\"progress\">\r\n      <div class=\"progress-bar\" role=\"progressbar\" style=\"width: {{ xpp.$1 }}%; background-color: lime !important\" aria-valuenow=\"{{ xp.$1 }}\" aria-valuemin=\"0\" aria-valuemax=\"13034431\"><\/div>\r\n    <\/div>\r\n    <i>{{ xpp1.$1 }}% to level 120<\/i>\r\n    <div class=\"progress\">\r\n      <div class=\"progress-bar\" role=\"progressbar\" style=\"width: {{ xpp1.$1 }}%; background-color: royalblue !important\" aria-valuenow=\"{{ xp.$1 }}\" aria-valuemin=\"0\" aria-valuemax=\"104273167\"><\/div>\r\n    <\/div>\r\n    <i>{{ xpp2.$1 }}% to 200m XP<\/i>\r\n    <div class=\"progress\">\r\n      <div class=\"progress-bar\" role=\"progressbar\" style=\"width: {{ xpp2.$1 }}%; background-color: maroon !important\" aria-valuenow=\"{{ xp.$1 }}\" aria-valuemin=\"0\" aria-valuemax=\"200000000\"><\/div>\r\n    <\/div>\r\n  {% elif skills.$1 > 98 and skills.$1 < 120 %}\r\n    <h4 style=\"color: lime;\">Level {{ skills.$1 }}<\/h4>\r\n    <h4 style=\"color: lime;\">XP {{ xpc.$1 }}<\/h4>\r\n    <i>{{ xpp1.$1 }}% to level 120<\/i>\r\n    <div class=\"progress\">\r\n      <div class=\"progress-bar\" role=\"progressbar\" style=\"width: {{ xpp1.$1 }}%; background-color: royalblue !important\" aria-valuenow=\"{{ xp.$1 }}\" aria-valuemin=\"0\" aria-valuemax=\"104273167\"><\/div>\r\n    <\/div>\r\n    <i>{{ xpp2.$1 }}% to 200m XP<\/i>\r\n    <div class=\"progress\">\r\n      <div class=\"progress-bar\" role=\"progressbar\" style=\"width: {{ xpp2.$1 }}%; background-color: maroon !important\" aria-valuenow=\"{{ xp.$1 }}\" aria-valuemin=\"0\" aria-valuemax=\"200000000\"><\/div>\r\n    <\/div>\r\n  {% elif skills.$1 > 119 and xp.$1 < 200000000 %}\r\n    <h4 style=\"color: royalblue;\">Level {{ skills.$1 }}<\/h4>\r\n    <h4 style=\"color: royalblue;\">XP {{ xpc.$1 }}<\/h4>\r\n    <i>{{ xpp2.$1 }}% to 200m XP<\/i>\r\n    <div class=\"progress\">\r\n      <div class=\"progress-bar\" role=\"progressbar\" style=\"width: {{ xpp2.$1 }}%; background-color: maroon !important\" aria-valuenow=\"{{ xp.$1 }}\" aria-valuemin=\"0\" aria-valuemax=\"200000000\"><\/div>\r\n    <\/div>\r\n  {% elif xp.$1 > 199999999 %}\r\n    <h4 style=\"color: maroon;\">Level {{ skills.$1 }}<\/h4>\r\n    <h4 style=\"color: maroon;\">XP {{ xpc.$1 }}<\/h4>\r\n  {% endif %}\r\n<\/div>"
+		]
+	}
+}
