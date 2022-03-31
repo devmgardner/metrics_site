@@ -15,7 +15,7 @@ from .utilities import apiscrape, dbscrape, quests, avgscrape
 #    return render(request, 'feed/iportfolio.html', {'combatlevel':dasn1ucombat, 'totalskill':dasn1utotalskill, 'totalxp':dasn1utotalxp, 'rank':dasn1urank, 'skills':dasn1uskilllevels, 'xp':dasn1uskillxp, 'questscomplete':dasn1uquestscomplete, 'questspercent':dasn1uquestspercent, 'name':'dasn1u', 'activities':dasn1uact, 'allquests':dasn1uquests, 'xpc':dasn1uskillxpc, 'xpp':dasn1uskillxpp, 'xpp1':dasn1uskillxpp1, 'xpp2':dasn1uskillxpp2})
 
 def charname(request, player):
-    return render(request, 'feed/iportfolio.html', {'combatlevel':combat(player), 'totalskill':totalskill(player), 'totalxp':totalxp(player), 'rank':rank(player), 'skills':skilllevels(player), 'xp':skillxp(player), 'questscomplete':questscomplete(player), 'questspercent':questspercent(player), 'name':player, 'activities':act(player), 'allquests':charquests(player), 'xpc':skillxpc(player), 'xpp':skillxpp(player), 'xpp1':skillxpp1(player), 'xpp2':skillxpp2(player), 'averages':xpaverages(player), 'levelstilmax':maxcape(player)})
+    return render(request, 'feed/iportfolio.html', {'combatlevel':combat(player), 'totalskill':totalskill(player), 'totalxp':totalxp(player), 'rank':rank(player), 'skills':skilllevels(player), 'xp':skillxp(player), 'questscomplete':questscomplete(player), 'questspercent':questspercent(player), 'name':player, 'activities':act(player), 'allquests':charquests(player), 'xpc':skillxpc(player), 'xpp':skillxpp(player), 'xpp1':skillxpp1(player), 'xpp2':skillxpp2(player), 'averages':xpaverages(player), 'levelstilmax':maxcape(player), 'xptilmax':maxxp(player)})
 
 def combat(player):
     return apiscrape(player)[0]
@@ -416,7 +416,96 @@ def maxcape(player):
         if skill['level'] < 99:
             maxlevel += (99 - skill['level'])
     return maxlevel
-
+def maxxp(player):
+    allskills = json.loads(apiscrape(player)[4])
+    xpreq = 0
+    for skill in allskills:
+        skill['xp'] /= 10
+        if skill['id'] == 0:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 1:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 2:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 3:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 4:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 5:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 6:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 7:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 8:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 9:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 10:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 11:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 12:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 13:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 14:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 15:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 16:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 17:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 18:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 19:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 20:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 21:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 22:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 23:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 24:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 25:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+        elif skill['id'] == 26:
+            if skill['xp'] < 36073511:
+                xpreq += (36073511 - skill['xp'])
+        elif skill['id'] == 27:
+            if skill['xp'] < 13034431:
+                xpreq += (13034431 - skill['xp'])
+    return xpreq
 
 
 #def ergocombat():
