@@ -5,7 +5,7 @@ parentdir = os.path.dirname(currentdir)
 sys.path.append(parentdir)
 
 def scrape():
-    names = ['Ergo','Alinthar','Naevyse']
+    names = ['Ergo','Alinthar','Naevyse','Alrick35']
     for name in names:
         #print(name)
         fname = f'{currentdir}/{name}-scrapelog.txt'

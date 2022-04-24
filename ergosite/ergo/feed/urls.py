@@ -14,4 +14,8 @@ urlpatterns = [
     path('naevyse', views.charname, {'player':'Naevyse'}, name='naevyse'),
     path('Naevyse/', views.charname, {'player':'Naevyse'}, name='naevyse'),
     path('Naevyse', views.charname, {'player':'Naevyse'}, name='naevyse'),
+    path('Alrick35/', views.charname, {'player':'Alrick35'}, name='alrick35'),
+    path('Alrick35', views.charname, {'player':'Alrick35'}, name='alrick35'),
+    path('alrick35/', views.charname, {'player':'Alrick35'}, name='alrick35'),
+    path('alrick35', views.charname, {'player':'Alrick35'}, name='alrick35'),
 ]
